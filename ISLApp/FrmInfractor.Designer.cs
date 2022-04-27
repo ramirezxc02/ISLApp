@@ -35,8 +35,9 @@ namespace ISLApp
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbCedula = new System.Windows.Forms.TextBox();
+            this.tbNombreInfractor = new System.Windows.Forms.TextBox();
+            this.btnBusqueda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,6 @@ namespace ISLApp
             this.label1.Size = new System.Drawing.Size(258, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Crear Informe";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -59,7 +59,6 @@ namespace ISLApp
             this.label2.Size = new System.Drawing.Size(247, 33);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cédula Infractor:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -70,7 +69,6 @@ namespace ISLApp
             this.label3.Size = new System.Drawing.Size(259, 33);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre Infractor:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -81,7 +79,6 @@ namespace ISLApp
             this.label4.Size = new System.Drawing.Size(85, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tipo:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
@@ -91,7 +88,6 @@ namespace ISLApp
             this.button1.TabIndex = 4;
             this.button1.Text = "Crear informe";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -100,32 +96,45 @@ namespace ISLApp
             "Turista"});
             this.comboBox1.Location = new System.Drawing.Point(648, 418);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(305, 21);
+            this.comboBox1.Size = new System.Drawing.Size(289, 21);
             this.comboBox1.TabIndex = 5;
             // 
-            // textBox1
+            // tbCedula
             // 
-            this.textBox1.Location = new System.Drawing.Point(648, 241);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 33);
-            this.textBox1.TabIndex = 6;
+            this.tbCedula.Location = new System.Drawing.Point(648, 241);
+            this.tbCedula.Multiline = true;
+            this.tbCedula.Name = "tbCedula";
+            this.tbCedula.Size = new System.Drawing.Size(289, 33);
+            this.tbCedula.TabIndex = 6;
             // 
-            // textBox2
+            // tbNombreInfractor
             // 
-            this.textBox2.Location = new System.Drawing.Point(648, 326);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 33);
-            this.textBox2.TabIndex = 7;
+            this.tbNombreInfractor.Enabled = false;
+            this.tbNombreInfractor.Location = new System.Drawing.Point(648, 326);
+            this.tbNombreInfractor.Multiline = true;
+            this.tbNombreInfractor.Name = "tbNombreInfractor";
+            this.tbNombreInfractor.Size = new System.Drawing.Size(289, 33);
+            this.tbNombreInfractor.TabIndex = 7;
+            // 
+            // btnBusqueda
+            // 
+            this.btnBusqueda.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnBusqueda.Location = new System.Drawing.Point(969, 241);
+            this.btnBusqueda.Name = "btnBusqueda";
+            this.btnBusqueda.Size = new System.Drawing.Size(110, 33);
+            this.btnBusqueda.TabIndex = 8;
+            this.btnBusqueda.Text = "Buscar";
+            this.btnBusqueda.UseVisualStyleBackColor = true;
+            this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
             // FrmInfractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1432, 874);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnBusqueda);
+            this.Controls.Add(this.tbNombreInfractor);
+            this.Controls.Add(this.tbCedula);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -134,6 +143,7 @@ namespace ISLApp
             this.Controls.Add(this.label1);
             this.Name = "FrmInfractor";
             this.Text = "FrmInfractor";
+            this.Load += new System.EventHandler(this.FrmInfractor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +157,8 @@ namespace ISLApp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbCedula;
+        private System.Windows.Forms.TextBox tbNombreInfractor;
+        private System.Windows.Forms.Button btnBusqueda;
     }
 }

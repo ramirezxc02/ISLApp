@@ -20,7 +20,7 @@ namespace ISLApp
         private void FrmUsuario_Load(object sender, EventArgs e)
         {
             this.Hide();
-            FrmInfractor frm = new FrmInfractor;
+            FrmInfractor frm = new FrmInfractor();
             frm.Show();
         }
     }
