@@ -1,0 +1,32 @@
+[33mcommit abaa7e2de37c1462b63264838050402f511ffee1[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 3340311 3c49ba1
+Author: Henoly Ramirez <henoly70@gmail.com>
+Date:   Tue Apr 19 00:23:16 2022 -0600
+
+    Merge branch 'ModuloUsuarios'
+
+[33mcommit 3c49ba16a7d5c16230915abf5b71241c3caa8607[m[33m ([m[1;32mModuloUsuarios[m[33m)[m
+Author: Henoly Ramirez <henoly70@gmail.com>
+Date:   Tue Apr 19 00:11:16 2022 -0600
+
+    Creación del formulario para el modulo de usuarios
+
+[33mcommit 3340311e8509f2a2f61d585ccc5835316f940f6c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/ModuloUsuarios[m[33m)[m
+Author: ramirezxc <61263882+ramirezxc02@users.noreply.github.com>
+Date:   Mon Apr 18 22:58:46 2022 -0600
+
+    Creación del README.md
+    
+    Todavía se debe actualizar la instalación, colaboración y las FAQs. Al final de la pagina se encuentra un link con una guía.
+
+[33mcommit ce0c71ce546d9fb0c24c480741418f2281848bd6[m
+Author: Henoly Ramirez <henoly70@gmail.com>
+Date:   Mon Apr 18 21:20:27 2022 -0600
+
+    Agregar archivos de proyecto.
+
+[33mcommit d4f9acf25876394abfdd30a6e22682b81a2d9dff[m
+Author: Henoly Ramirez <henoly70@gmail.com>
+Date:   Mon Apr 18 21:20:23 2022 -0600
+
+    Agregar .gitattributes, .gitignore y README.md.

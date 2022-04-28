@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ISLApp
 {
-    public partial class ModuloUsuario : Form
+    public partial class Form1 : Form
     {
-        public ModuloUsuario()
+        public Form1()
         {
             InitializeComponent();
         }
