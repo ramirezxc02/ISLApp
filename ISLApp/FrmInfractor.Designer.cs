@@ -91,9 +91,11 @@ namespace ISLApp
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "Turista"});
+            "Turista",
+            "Capitan"});
             this.comboBox1.Location = new System.Drawing.Point(648, 418);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 21);
@@ -118,8 +120,8 @@ namespace ISLApp
             // 
             // btnBusqueda
             // 
-            this.btnBusqueda.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnBusqueda.Location = new System.Drawing.Point(969, 241);
+            this.btnBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBusqueda.Location = new System.Drawing.Point(959, 241);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(110, 33);
             this.btnBusqueda.TabIndex = 8;
@@ -131,7 +133,7 @@ namespace ISLApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1432, 874);
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.tbNombreInfractor);
             this.Controls.Add(this.tbCedula);
@@ -142,7 +144,7 @@ namespace ISLApp
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmInfractor";
-            this.Text = "FrmInfractor";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.FrmInfractor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
