@@ -1,10 +1,6 @@
 ﻿namespace ISLApp
 {
-<<<<<<<< HEAD:ISLApp/Form1.Designer.cs
-    partial class Form1
-========
-    partial class FrmUsuario
->>>>>>>> 4e644ec0c00c102572df2f3cc50b4eb031e2b480:ISLApp/FrmUsuario.Designer.cs
+    partial class FrmReporte
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "FrmReporte";
         }
 
         #endregion

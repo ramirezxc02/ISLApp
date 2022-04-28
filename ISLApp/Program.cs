@@ -16,7 +16,11 @@ namespace ISLApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Form1());
+=======
+            Application.Run(new FrmPrincipal());
+>>>>>>> 4e644ec0c00c102572df2f3cc50b4eb031e2b480
         }
     }
 }
