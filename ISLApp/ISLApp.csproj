@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmInformeInfractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformeInfractor.Designer.cs">
+      <DependentUpon>FrmInformeInfractor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInfractor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmInformeInfractor.resx">
+      <DependentUpon>FrmInformeInfractor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInfractor.resx">
       <DependentUpon>FrmInfractor.cs</DependentUpon>
     </EmbeddedResource>
