@@ -16,7 +16,7 @@ namespace ISLApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ModuloUsuario());
+            Application.Run(new FrmPrincipal());
         }
     }
 }
