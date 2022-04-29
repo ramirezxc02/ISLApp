@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿//using BLL;
+using Newtonsoft.Json;
+using System;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
+
 
 namespace ISLApp
 {
@@ -34,8 +33,9 @@ namespace ISLApp
                 if (cedula.Length > 0)
                 {
                     String urlStream = url+cedula;
-                    string respuesta = await GetHttp(urlStream);
-                    
+                    //Infractor infractor  =  JsonConvert.DeserializeObject(await GetHttp(urlStream));
+                    String estructura = await GetHttp(urlStream);
+                    Console.WriteLine(estructura);
                 }
                 else { 
                    //agregar una alerta en caso de que no se encuentre completo

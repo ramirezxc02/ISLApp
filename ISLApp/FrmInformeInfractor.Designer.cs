@@ -49,6 +49,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Agregar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -67,7 +68,6 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
-          
             // 
             // button4
             // 
@@ -99,7 +99,6 @@
             this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Buscar informe:";
-            
             // 
             // textBox1
             // 
