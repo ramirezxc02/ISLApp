@@ -15,6 +15,5 @@ namespace BLL
         public string cedula { get; set; }
         public string database_date { get; set; }
         public string resultcount { get; set; }
-        public IList<string> results { get; set; }
     }
 }

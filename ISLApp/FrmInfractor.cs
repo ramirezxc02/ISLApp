@@ -1,10 +1,12 @@
-﻿//using BLL;
+﻿using BLL;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 
 
@@ -32,10 +34,11 @@ namespace ISLApp
                 String cedula = this.tbCedula.Text;
                 if (cedula.Length > 0)
                 {
-                    String urlStream = url+cedula;
-                    //Infractor infractor  =  JsonConvert.DeserializeObject(await GetHttp(urlStream));
-                    String estructura = await GetHttp(urlStream);
-                    Console.WriteLine(estructura);
+                    String urlStream = url + cedula;
+                    String json = await GetHttp(urlStream);
+                    Infractor infractor = JsonConvert.DeserializeObject<Infractor>(json);
+
+                    this.tbNombreInfractor.Text = infractor.nombre;
                 }
                 else { 
                    //agregar una alerta en caso de que no se encuentre completo
@@ -53,7 +56,6 @@ namespace ISLApp
             WebResponse oResponse = oRequest.GetResponse();
             StreamReader sr = new StreamReader(oResponse.GetResponseStream());
             return await sr.ReadToEndAsync();
-
         }
     }
 }
