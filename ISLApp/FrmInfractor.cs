@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -16,9 +17,11 @@ namespace ISLApp
     public partial class FrmInfractor : Form
     {
         String url = "https://apis.gometa.org/cedulas/";
+        private Conexion conexion;
         public FrmInfractor()
         {
             InitializeComponent();
+            this.conexion = new Conexion(FrmPrincipal.getStringConexion());
         }
 
         private  void FrmInfractor_Load(object sender, EventArgs e)
@@ -31,7 +34,7 @@ namespace ISLApp
         {
             try
             {
-                String cedula = this.tbCedula.Text;
+                String cedula = this.tbCedula.Text.Trim();
                 if (cedula.Length > 0)
                 {
                     String urlStream = url + cedula;
@@ -40,14 +43,14 @@ namespace ISLApp
 
                     this.tbNombreInfractor.Text = infractor.nombre;
                 }
-                else { 
-                   //agregar una alerta en caso de que no se encuentre completo
+                else {
+                    MessageBox.Show("El campo cedula debe contener algun valor", "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                MessageBox.Show("Se encoentro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //Metodo asincronico que permite obtener un objeto json desde una api, para consultar a una persona por numero de cedula
@@ -56,6 +59,55 @@ namespace ISLApp
             WebResponse oResponse = oRequest.GetResponse();
             StreamReader sr = new StreamReader(oResponse.GetResponseStream());
             return await sr.ReadToEndAsync();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.tbCedula.Text.Length > 0 || tbNombreInfractor.Text.Length > 0 || this.cbTipo.Text.Length > 0)
+                {
+                    InfractorBD infractorBd = new InfractorBD();
+
+                    infractorBd.nombreResponsable = tbNombreInfractor.Text.Trim();
+                    infractorBd.cedulaResponsable = tbCedula.Text.Trim();
+                    infractorBd.tipoResponsable = this.cbTipo.Text.Trim();
+                    infractorBd.estado = true;
+
+                    try
+                    {
+                        if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
+                        {
+                            this.conexion.registrarInfractor(infractorBd);
+                            MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            limpiarCampos();
+                        }
+                        else {
+                            MessageBox.Show("La cedula digitada ya se encuentra registrada en el sistema", "Cedula Registrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            limpiarCampos();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        
+                    }
+                }
+                else {
+                    MessageBox.Show("Todos los campos son requeridos", "Campos Requeridos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Se encoentro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void limpiarCampos() {
+            tbNombreInfractor.Text = "";
+            tbCedula.Text = "";
+            cbTipo.Text = "";
         }
     }
 }

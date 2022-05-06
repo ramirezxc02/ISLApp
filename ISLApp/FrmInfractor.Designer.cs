@@ -33,8 +33,8 @@ namespace ISLApp
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCrear = new System.Windows.Forms.Button();
+            this.cbTipo = new System.Windows.Forms.ComboBox();
             this.tbCedula = new System.Windows.Forms.TextBox();
             this.tbNombreInfractor = new System.Windows.Forms.TextBox();
             this.btnBusqueda = new System.Windows.Forms.Button();
@@ -80,26 +80,27 @@ namespace ISLApp
             this.label4.TabIndex = 3;
             this.label4.Text = "Tipo:";
             // 
-            // button1
+            // btnCrear
             // 
-            this.button1.Location = new System.Drawing.Point(639, 534);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 56);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Crear informe";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCrear.Location = new System.Drawing.Point(702, 487);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(170, 56);
+            this.btnCrear.TabIndex = 4;
+            this.btnCrear.Text = "Crear informe";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // cbTipo
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipo.FormattingEnabled = true;
+            this.cbTipo.Items.AddRange(new object[] {
             "Turista",
             "Capitan"});
-            this.comboBox1.Location = new System.Drawing.Point(648, 418);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cbTipo.Location = new System.Drawing.Point(648, 418);
+            this.cbTipo.Name = "cbTipo";
+            this.cbTipo.Size = new System.Drawing.Size(289, 21);
+            this.cbTipo.TabIndex = 5;
             // 
             // tbCedula
             // 
@@ -121,7 +122,7 @@ namespace ISLApp
             // btnBusqueda
             // 
             this.btnBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBusqueda.Location = new System.Drawing.Point(959, 241);
+            this.btnBusqueda.Location = new System.Drawing.Point(966, 241);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(110, 33);
             this.btnBusqueda.TabIndex = 8;
@@ -137,8 +138,8 @@ namespace ISLApp
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.tbNombreInfractor);
             this.Controls.Add(this.tbCedula);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbTipo);
+            this.Controls.Add(this.btnCrear);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -157,8 +158,8 @@ namespace ISLApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.ComboBox cbTipo;
         private System.Windows.Forms.TextBox tbCedula;
         private System.Windows.Forms.TextBox tbNombreInfractor;
         private System.Windows.Forms.Button btnBusqueda;
