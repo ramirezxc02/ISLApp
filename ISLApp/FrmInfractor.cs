@@ -65,7 +65,7 @@ namespace ISLApp
         {
             try
             {
-                if (this.tbCedula.Text.Length > 0 || tbNombreInfractor.Text.Length > 0 || this.cbTipo.Text.Length > 0)
+                if (this.tbCedula.Text.Length > 0 && tbNombreInfractor.Text.Length > 0 && this.cbTipo.Text.Length > 0)
                 {
                     InfractorBD infractorBd = new InfractorBD();
 
@@ -78,7 +78,7 @@ namespace ISLApp
                     {
                         if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
                         {
-                            this.conexion.registrarInfractor(infractorBd);
+                            //this.conexion.registrarInfractor(infractorBd);
                             MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             limpiarCampos();
                         }
@@ -89,8 +89,7 @@ namespace ISLApp
                     }
                     catch (Exception ex)
                     {
-
-                        
+                        MessageBox.Show("Se encoentro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else {

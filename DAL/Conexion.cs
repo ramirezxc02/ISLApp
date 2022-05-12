@@ -79,5 +79,62 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public DataTable consultaInfractores() {
+            try
+            {
+                DataTable temp = new DataTable();
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[consultaInfractores]";
+
+                this.adapter = new SqlDataAdapter();
+                adapter.SelectCommand = this.command;
+                adapter.Fill(temp);
+                this.connection.Close();
+                this.connection.Dispose();
+                this.adapter.Dispose();
+
+                return temp;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public DataTable busqueda(String criterio) {
+            try
+            {
+                DataTable temp = new DataTable();
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "[busqueda]";
+                this.command.Parameters.AddWithValue("@criterio", criterio);
+
+                this.adapter = new SqlDataAdapter();
+                adapter.SelectCommand = this.command;
+                adapter.Fill(temp);
+                this.connection.Close();
+                this.connection.Dispose();
+                this.adapter.Dispose();
+
+                return temp;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
