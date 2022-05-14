@@ -19,24 +19,28 @@ namespace ISLApp
         String url = "https://apis.gometa.org/cedulas/";
         private Conexion conexion;
         Boolean modificar = false;
-        public FrmInfractor()
+        FrmInformeInfractor padre;
+        int idModificacion = 0;
+        public FrmInfractor(FrmInformeInfractor padre)
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
             modificar = false;
+            this.padre = padre;
         }
 
-        public FrmInfractor(Boolean modificar, String cedula, String nombre, String tipo, int idInfractor)
+        public FrmInfractor(FrmInformeInfractor padre, Boolean modificar, String cedula, String nombre, String tipo, int idInfractor)
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
             this.lblTitle.Text = "Modificar Informe";
+            this.btnCrear.Text = "Modificar";
             tbCedula.Text = cedula;
             tbNombreInfractor.Text = nombre;
+            cbTipo.Text = tipo;
             this.modificar = modificar;
-
-
-
+            this.padre = padre;
+            idModificacion = idInfractor;
         }
 
         private  void FrmInfractor_Load(object sender, EventArgs e)
@@ -91,24 +95,30 @@ namespace ISLApp
 
                     try
                     {
-                        if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
-                        {
-                            if (modificar)
-                            {
-                                this.conexion.registrarInfractor(infractorBd);
-                                MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                         if (modificar)
+                         {
+                            if (idModificacion != 0) {
+                                this.conexion.modificar(infractorBd, idModificacion);
+                                MessageBox.Show("Realizaron los cambios de manera correcta", "Modificado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 limpiarCampos();
+                                padre.cargarTabla();
+                                this.Dispose();
                             }
+                         }
+                          else {
+                              if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
+                              {
+                                  this.conexion.registrarInfractor(infractorBd);
+                                    MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    limpiarCampos();
+                                    padre.cargarTabla();
+                                    this.Dispose();
+                                }
                             else {
-                                this.conexion.registrarInfractor(infractorBd);
-                                MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("La cedula digitada ya se encuentra registrada en el sistema", "Cedula Registrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 limpiarCampos();
+                             }
                             }
-                        }
-                        else {
-                            MessageBox.Show("La cedula digitada ya se encuentra registrada en el sistema", "Cedula Registrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            limpiarCampos();
-                        }
                     }
                     catch (Exception ex)
                     {

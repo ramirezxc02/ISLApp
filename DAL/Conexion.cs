@@ -136,5 +136,32 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public void modificar(InfractorBD infractor, int idModificacion)
+        {
+            try
+            {
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "modificarInfractor";
+                this.command.Parameters.AddWithValue("@cedulaResponsable", infractor.cedulaResponsable);
+                this.command.Parameters.AddWithValue("@nombreResponsable", infractor.nombreResponsable);
+                this.command.Parameters.AddWithValue("@tipoResponsable", infractor.tipoResponsable);
+                this.command.Parameters.AddWithValue("@idResponsable", idModificacion);
+                this.command.ExecuteNonQuery();
+                this.command.Parameters.Clear();
+                this.connection.Close();
+                this.connection.Dispose();
+                this.command.Dispose();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

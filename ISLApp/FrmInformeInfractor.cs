@@ -15,7 +15,8 @@ namespace ISLApp
     public partial class FrmInformeInfractor : Form
     {
         private Conexion conexion;
-        private string id, nombre, cedula, tipo;
+        private string  nombre, cedula, tipo;
+        int id;
         public FrmInformeInfractor()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace ISLApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmInfractor infractor = new FrmInfractor();
+            FrmInfractor infractor = new FrmInfractor(this);
             infractor.Show();
         }
 
@@ -48,7 +49,13 @@ namespace ISLApp
             }
         }
 
-        private void cargarTabla() {
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FrmInfractor modificarInfractor = new FrmInfractor(this, true, cedula, nombre, tipo, id);
+            modificarInfractor.Show();
+        }
+
+        public void cargarTabla() {
             try
             {
                 this.dgInfractores.DataSource = conexion.consultaInfractores();
@@ -70,7 +77,7 @@ namespace ISLApp
         //permite selecionar y guardar los datos de la celda selecionada para modificar o eliminar 
         private void dgInfractores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = dgInfractores.CurrentRow.Cells[0].Value.ToString();
+            id = int.Parse(dgInfractores.CurrentRow.Cells[0].Value.ToString());
             nombre = dgInfractores.CurrentRow.Cells[1].Value.ToString();
             cedula = dgInfractores.CurrentRow.Cells[2].Value.ToString();
             tipo = dgInfractores.CurrentRow.Cells[3].Value.ToString();
