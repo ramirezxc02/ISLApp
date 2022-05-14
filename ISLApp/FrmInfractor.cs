@@ -18,10 +18,25 @@ namespace ISLApp
     {
         String url = "https://apis.gometa.org/cedulas/";
         private Conexion conexion;
+        Boolean modificar = false;
         public FrmInfractor()
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
+            modificar = false;
+        }
+
+        public FrmInfractor(Boolean modificar, String cedula, String nombre, String tipo, int idInfractor)
+        {
+            InitializeComponent();
+            this.conexion = new Conexion(FrmPrincipal.getStringConexion());
+            this.lblTitle.Text = "Modificar Informe";
+            tbCedula.Text = cedula;
+            tbNombreInfractor.Text = nombre;
+            this.modificar = modificar;
+
+
+
         }
 
         private  void FrmInfractor_Load(object sender, EventArgs e)
@@ -78,9 +93,17 @@ namespace ISLApp
                     {
                         if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
                         {
-                            //this.conexion.registrarInfractor(infractorBd);
-                            MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            limpiarCampos();
+                            if (modificar)
+                            {
+                                this.conexion.registrarInfractor(infractorBd);
+                                MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpiarCampos();
+                            }
+                            else {
+                                this.conexion.registrarInfractor(infractorBd);
+                                MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                limpiarCampos();
+                            }
                         }
                         else {
                             MessageBox.Show("La cedula digitada ya se encuentra registrada en el sistema", "Cedula Registrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
