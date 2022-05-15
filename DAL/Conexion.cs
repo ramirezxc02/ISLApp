@@ -104,7 +104,7 @@ namespace DAL
             catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 
@@ -160,6 +160,28 @@ namespace DAL
             catch (Exception ex)
             {
 
+                throw ex;
+            }
+        }
+        public void deshabilitar( int identificador)
+        {
+            try
+            {
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "deshabilitarInfractor";
+                this.command.Parameters.AddWithValue("@identificador", identificador);
+                this.command.ExecuteNonQuery();
+                this.command.Parameters.Clear();
+                this.connection.Close();
+                this.connection.Dispose();
+                this.command.Dispose();
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
         }

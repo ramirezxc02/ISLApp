@@ -16,7 +16,7 @@ namespace ISLApp
     {
         private Conexion conexion;
         private string  nombre, cedula, tipo;
-        int id;
+         int id= 0;
         public FrmInformeInfractor()
         {
             InitializeComponent();
@@ -67,7 +67,26 @@ namespace ISLApp
             }
         }
 
-        
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id != 0) {
+                    conexion.deshabilitar(id);
+                    MessageBox.Show("Se ha eliminado de manera correcta","Proceso realizado de manera correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.cargarTabla();
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar a un infractor", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Se encontro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
