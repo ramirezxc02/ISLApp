@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+
+using ISLApp.Properties;
+
 namespace ISLApp
 {
     public partial class FrmPrincipal : Form
@@ -17,11 +20,17 @@ namespace ISLApp
             InitializeComponent();
         }
 
+        public static string ObtenerStringConexion()
+        {
+            return Settings.Default.StringConexion;
+        }
 
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            FrmReporte frmReporte = new FrmReporte();
+            frmReporte.ShowDialog();
+            frmReporte.Close();
         }
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
