@@ -85,10 +85,11 @@ namespace ISLApp
                 this.dataGridDatos.ReadOnly = true;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
+                Console.WriteLine(ex);
             }
         }
 
@@ -139,9 +140,15 @@ namespace ISLApp
         public void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
-            idReporteModificar = int.Parse(this.dataGridDatos.CurrentRow.Cells[0].Value.ToString());
-            MessageBox.Show( "entro");
+            
 
+        }
+
+        private void dataGridDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idReporteModificar = int.Parse(this.dataGridDatos.CurrentRow.Cells[0].Value.ToString());
+            MessageBox.Show("entro");
+            Console.WriteLine(idReporteModificar);
         }
     }
 }

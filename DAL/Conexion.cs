@@ -256,15 +256,16 @@ namespace DAL
                     temp.horaInicio = this.dataReader.GetValue(4).ToString();
                     temp.lugaresRecorridos = this.dataReader.GetValue(5).ToString();
                     temp.horaFinalizacion = this.dataReader.GetValue(6).ToString();
-                    temp.accionDesarrollada = this.dataReader.GetValue(7).ToString();
-                    temp.fechaReporte = this.dataReader.GetValue(8).ToString();
-                    temp.recomendacion = this.dataReader.GetValue(9).ToString();
-                    temp.observacion = this.dataReader.GetValue(10).ToString();
-                    temp.matricula = this.dataReader.GetValue(11).ToString();
-                    temp.combustible = int.Parse(this.dataReader.GetValue(12).ToString());
-                    temp.kilometroInicio = this.dataReader.GetValue(13).ToString();
-                    temp.kilometroFinal = this.dataReader.GetValue(14).ToString();
-                    temp.placa = this.dataReader.GetValue(15).ToString();
+                    temp.numeroOficio = this.dataReader.GetValue(7).ToString();
+                    temp.accionDesarrollada = this.dataReader.GetValue(8).ToString();
+                    temp.fechaReporte = this.dataReader.GetValue(9).ToString();
+                    temp.recomendacion = this.dataReader.GetValue(10).ToString();
+                    temp.observacion = this.dataReader.GetValue(11).ToString();
+                    temp.matricula = this.dataReader.GetValue(12).ToString();
+                    temp.combustible = int.Parse(this.dataReader.GetValue(13).ToString());
+                    temp.kilometroInicio = this.dataReader.GetValue(14).ToString();
+                    temp.kilometroFinal = this.dataReader.GetValue(15).ToString();
+                    temp.placa = this.dataReader.GetValue(16).ToString();
                 }
                 //cerrar la conexion
                 this.conection.Close();
