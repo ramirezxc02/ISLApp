@@ -56,20 +56,35 @@ namespace ISLApp
                 String cedula = this.tbCedula.Text.Trim();
                 if (cedula.Length > 0)
                 {
-                    String urlStream = url + cedula;
-                    String json = await GetHttp(urlStream);
-                    Infractor infractor = JsonConvert.DeserializeObject<Infractor>(json);
+                    if (cedula.Length > 8)
+                    {
+                        String urlStream = url + cedula;
+                        String json = await GetHttp(urlStream);
+                        Infractor infractor = JsonConvert.DeserializeObject<Infractor>(json);
 
-                    this.tbNombreInfractor.Text = infractor.nombre;
+                        if (int.Parse(infractor.resultcount) != 0)
+                        {
+                            this.tbNombreInfractor.Text = infractor.nombre;
+                        }
+                        else {
+                            MessageBox.Show("La cédula digitada no pertenece a nadie", "Persona no registrada", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            limpiarCampos();
+                        }
+                    }
+                    else {
+                        MessageBox.Show("Debe digitar la cédula completa", "Dato Incompleto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        limpiarCampos();
+                    }
                 }
                 else {
-                    MessageBox.Show("El campo cedula debe contener algun valor", "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El campo cédula debe contener algun valor", "Campo Requerido", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    limpiarCampos();
                 }
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show("Se encoentro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Verifique su conexión con internet: ", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //Metodo asincronico que permite obtener un objeto json desde una api, para consultar a una persona por numero de cedula

@@ -15,7 +15,7 @@ namespace ISLApp
     public partial class FrmPrincipal : Form
     {
         FrmInformeInfractor frmInforme;
-        
+        bool informe =  false;
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -48,9 +48,16 @@ namespace ISLApp
 
         private void btnCrearInforme_Click(object sender, EventArgs e)
         {
-            frmInforme = new FrmInformeInfractor();
-            this.frmInforme.MdiParent = this;
-            this.frmInforme.Show();
+            if (!informe)
+            {
+                frmInforme = new FrmInformeInfractor();
+                this.informe = true;
+                this.frmInforme.MdiParent = this;
+                this.frmInforme.Show();
+            }
+            else {
+                Console.WriteLine("No abrio la instancia");
+            }
         }
     }
 }

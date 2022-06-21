@@ -54,7 +54,7 @@
             this.panelSlideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelSlideMenu.Name = "panelSlideMenu";
-            this.panelSlideMenu.Size = new System.Drawing.Size(188, 538);
+            this.panelSlideMenu.Size = new System.Drawing.Size(188, 535);
             this.panelSlideMenu.TabIndex = 0;
             // 
             // button4
@@ -64,7 +64,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(0, 501);
+            this.button4.Location = new System.Drawing.Point(0, 498);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(188, 37);
@@ -157,7 +157,7 @@
             this.panelTitleBar.Location = new System.Drawing.Point(188, 0);
             this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(768, 65);
+            this.panelTitleBar.Size = new System.Drawing.Size(766, 65);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -167,7 +167,7 @@
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(354, 20);
+            this.labelTitle.Location = new System.Drawing.Point(353, 20);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(80, 28);
@@ -179,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(956, 538);
+            this.ClientSize = new System.Drawing.Size(954, 535);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSlideMenu);
             this.IsMdiContainer = true;
