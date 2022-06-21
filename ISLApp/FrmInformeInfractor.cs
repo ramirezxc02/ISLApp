@@ -45,14 +45,28 @@ namespace ISLApp
             catch (Exception ex)
             {
 
-                MessageBox.Show("Se encontro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se encontro un error: Error en la conexión con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FrmInfractor modificarInfractor = new FrmInfractor(this, true, cedula, nombre, tipo, id);
-            modificarInfractor.Show();
+            try
+            {
+                if (id != 0)
+                {
+                    FrmInfractor modificarInfractor = new FrmInfractor(this, true, cedula, nombre, tipo, id);
+                    modificarInfractor.Show();
+                }
+                else {
+                    MessageBox.Show("Debe seleccionar un dato valido", "Datos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Ocurrio un problema al seleccionar los datos","Error al seleccionar los datos",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public void cargarTabla() {
@@ -87,19 +101,36 @@ namespace ISLApp
                 MessageBox.Show("Se encontro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //permite selecionar y guardar los datos de la celda selecionada para modificar o eliminar 
+        private void dgInfractores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                id = int.Parse(dgInfractores.CurrentRow.Cells[0].Value.ToString());
+                nombre = dgInfractores.CurrentRow.Cells[1].Value.ToString();
+                cedula = dgInfractores.CurrentRow.Cells[2].Value.ToString();
+                tipo = dgInfractores.CurrentRow.Cells[3].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                id = 0;
+                nombre = "";
+                cedula = "";
+                tipo = "";
+                
+                MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        //permite selecionar y guardar los datos de la celda selecionada para modificar o eliminar 
+        
         private void dgInfractores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(dgInfractores.CurrentRow.Cells[0].Value.ToString());
-            nombre = dgInfractores.CurrentRow.Cells[1].Value.ToString();
-            cedula = dgInfractores.CurrentRow.Cells[2].Value.ToString();
-            tipo = dgInfractores.CurrentRow.Cells[3].Value.ToString();
+            
             
         }
     }
