@@ -127,6 +127,7 @@ namespace ISLApp
                                     MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     limpiarCampos();
                                     padre.cargarTabla();
+                                    padre.activarBotones();
                                     this.Dispose();
                                 }
                             else {

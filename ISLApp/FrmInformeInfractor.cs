@@ -22,6 +22,16 @@ namespace ISLApp
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
             this.cargarTabla();
+
+            if (state() == 0)
+            {
+                this.btnEditar.Enabled = false;
+                this.btnEliminar.Enabled = false;
+            }
+            else { 
+                this.btnEditar.Enabled = true;
+                this.btnEliminar.Enabled = true;
+            }
         }
 
 
@@ -120,6 +130,30 @@ namespace ISLApp
                 
                 MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private  int  state()
+        {
+            try
+            {
+                int cantidad = 0;
+
+                cantidad = conexion.cantidadEmpleadosActivos();
+
+                return cantidad;
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Problema con la base de datos");
+                return 0;
+            }
+        }
+
+        public void activarBotones()
+        {
+            this.btnEliminar.Enabled = true;
+            this.btnEditar.Enabled = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

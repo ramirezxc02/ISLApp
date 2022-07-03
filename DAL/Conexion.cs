@@ -185,5 +185,29 @@ namespace DAL
                 throw ex;
             }
         }
+
+        public int cantidadEmpleadosActivos() {
+            try
+            {
+                int cantidad = 0;
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+                this.command = new SqlCommand();
+                this.command.Connection = this.connection;
+                this.command.CommandType = CommandType.StoredProcedure;
+                this.command.CommandText = "consulta_infractor_cedula";
+                this.reader = this.command.ExecuteReader();
+                cantidad = int.Parse(this.reader.GetValue(0).ToString());
+                this.connection.Close();
+                this.connection.Dispose();
+                this.command.Dispose();
+
+                return cantidad;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
