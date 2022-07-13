@@ -24,7 +24,25 @@ namespace DAL
             this.strConexion = strCnx;
         }
 
-        //metodo para registrar un infractor
+        public Boolean realizarConexion() {
+            try
+            {
+                Boolean conexionEstablecida = false;
+                this.connection = new SqlConnection(this.strConexion);
+                this.connection.Open();
+                if ((connection.State & ConnectionState.Open) > 0) {
+                    conexionEstablecida = true;
+                }
+                return conexionEstablecida;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Conexion no establecida");
+                return false;
+            }
+        }
+        // metodos que recibe como parametros un infractor y realiza un llamado a un stored procedured de la base de datos
+        // que permite realizar un insert
         public void registrarInfractor(InfractorBD infractor) 
         {
             try
@@ -47,8 +65,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Console.WriteLine("Error al realizar la consulta en la base de datos" +ex);
             }
         }
 
@@ -103,8 +120,9 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Console.WriteLine("Ocurrio un error al realizar la consulta de la base de datos" +ex);
+                DataTable temp = new DataTable();
+                return temp;
             }
         }
 
@@ -132,8 +150,9 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
-                throw ex;
+                Console.WriteLine("Ocurrio un error al realizar la consulta en la base" +ex);
+                DataTable temp = new DataTable();
+                return temp;
             }
         }
 
@@ -159,8 +178,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-
-                throw ex;
+               Console.WriteLine("Error en la consulta de la base de datos" + ex);
             }
         }
         public void deshabilitar( int identificador)
@@ -182,11 +200,11 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine("Error en la consulta de la base de datos" + ex);
             }
         }
 
-        public int cantidadEmpleadosActivos() {
+        public int cantidadInfractoresActivos() {
             try
             {
                 int cantidad = 0;
@@ -206,7 +224,8 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                throw ex;
+                Console.WriteLine("Ocurrio un error al consultar la base de datos" + ex);
+                return 0;
             }
         }
     }

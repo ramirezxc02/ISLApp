@@ -21,6 +21,10 @@ namespace ISLApp
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
+            if (!conexion.realizarConexion()) {
+                MessageBox.Show("No se logro establecer la conexión con la base de datos", "Error"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             this.cargarTabla();
 
             if (state() == 0)
@@ -54,7 +58,7 @@ namespace ISLApp
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("Se encontro un error: Error en la conexión con la base de datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -74,7 +78,7 @@ namespace ISLApp
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("Ocurrio un problema al seleccionar los datos","Error al seleccionar los datos",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -90,7 +94,7 @@ namespace ISLApp
                 MessageBox.Show("Se encontro un error: " + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             try
@@ -127,7 +131,7 @@ namespace ISLApp
                 nombre = "";
                 cedula = "";
                 tipo = "";
-                
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -136,16 +140,16 @@ namespace ISLApp
         {
             try
             {
-                int cantidad = 0;
+               
 
-                cantidad = conexion.cantidadEmpleadosActivos();
+               int cantidad = conexion.cantidadInfractoresActivos();
 
                 return cantidad;
                 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Problema con la base de datos");
+                Console.WriteLine("Problema con la base de datos" +ex);
                 return 0;
             }
         }
