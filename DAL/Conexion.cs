@@ -37,7 +37,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Conexion no establecida");
+                Console.WriteLine("Conexion no establecida" + ex);
                 return false;
             }
         }
@@ -213,9 +213,12 @@ namespace DAL
                 this.command = new SqlCommand();
                 this.command.Connection = this.connection;
                 this.command.CommandType = CommandType.StoredProcedure;
-                this.command.CommandText = "consulta_infractor_cedula";
+                this.command.CommandText = "cantidadInfractorActivos";
                 this.reader = this.command.ExecuteReader();
-                cantidad = int.Parse(this.reader.GetValue(0).ToString());
+                if (this.reader.Read())
+                {
+                    cantidad = int.Parse(this.reader.GetValue(0).ToString());
+                }
                 this.connection.Close();
                 this.connection.Dispose();
                 this.command.Dispose();

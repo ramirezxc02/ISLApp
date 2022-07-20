@@ -48,7 +48,7 @@ namespace ISLApp
             
         }
 
-
+        // metodo asincronico que requiere del campo cedula(req) para realizar una busqueda a traves de la api.
         private async void btnBusqueda_Click(object sender, EventArgs e)
         {
             try
@@ -83,7 +83,7 @@ namespace ISLApp
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine("Ocurrio un error" + ex);
                 MessageBox.Show("Verifique su conexión con internet: ", "Error de conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -110,31 +110,40 @@ namespace ISLApp
 
                     try
                     {
-                         if (modificar)
-                         {
-                            if (idModificacion != 0) {
-                                this.conexion.modificar(infractorBd, idModificacion);
-                                MessageBox.Show("Realizaron los cambios de manera correcta", "Modificado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                limpiarCampos();
-                                padre.cargarTabla();
-                                this.Dispose();
+                        if (this.conexion.realizarConexion())
+                        {
+                            if (modificar)
+                            {
+                                if (idModificacion != 0)
+                                {
+                                    this.conexion.modificar(infractorBd, idModificacion);
+                                    MessageBox.Show("Realizaron los cambios de manera correcta", "Modificado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    limpiarCampos();
+                                    padre.cargarTabla();
+                                    this.Dispose();
+                                }
                             }
-                         }
-                          else {
-                              if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
-                              {
-                                  this.conexion.registrarInfractor(infractorBd);
+                            else
+                            {
+                                if (conexion.buscarInfractorXcedula(infractorBd.cedulaResponsable) == 0)
+                                {
+                                    this.conexion.registrarInfractor(infractorBd);
                                     MessageBox.Show("La persona fue registrada de manera correcta", "Guardado con Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     limpiarCampos();
                                     padre.cargarTabla();
                                     padre.activarBotones();
                                     this.Dispose();
                                 }
-                            else {
-                                MessageBox.Show("La cedula digitada ya se encuentra registrada en el sistema", "Cedula Registrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                limpiarCampos();
-                             }
+                                else
+                                {
+                                    MessageBox.Show("La cedula digitada ya se encuentra registrada en el sistema", "Cedula Registrada", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    limpiarCampos();
+                                }
                             }
+                        }
+                        else {
+                            MessageBox.Show("Revise la conexión con internet o su conexión con la base de datos", "No se encontro la base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     catch (Exception ex)
                     {
