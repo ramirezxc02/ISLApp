@@ -1,0 +1,10 @@
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\bin\Debug\ISLApp.exe.config
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\bin\Debug\ISLApp.exe
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\bin\Debug\ISLApp.pdb
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.csproj.AssemblyReference.cache
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.csproj.SuggestedBindingRedirects.cache
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.Properties.Resources.resources
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.csproj.GenerateResource.cache
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.csproj.CoreCompileInputs.cache
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.exe
+C:\ProyectoIslaSanLucas\ISLApp\ISLApp\obj\Debug\ISLApp.pdb

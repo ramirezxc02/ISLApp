@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+
+using ISLApp.Properties;
 namespace ISLApp
 {
     public partial class FrmPrincipal : Form
@@ -19,21 +21,15 @@ namespace ISLApp
 
 
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnUsuario_Click(object sender, EventArgs e)
+        public static string ObtenerStringConexion()
         {
-
+            return Settings.Default.stringConexion;
         }
-
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
            
