@@ -22,22 +22,33 @@ namespace ISLApp
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion()); // obtiene la conexion para la base de datos.
             //Pregunta si la conexion se logro realizar con la base de datos, si es satisfactoria el sistema continua con normalidad en caso contrario alerta al usuario (REQ).
-            if (!conexion.realizarConexion()) {
+            if (conexion.realizarConexion())
+            {
+                this.cargarTabla();
+                // Cambia el estado de los botones en caso de que los infractores sean igual que cero, el sistema no habilita los botones, en caso contrario se habilitaran para realizar una modificacion o eliminar.
+                if (state() == 0)
+                {
+                    this.btnEditar.Enabled = false;
+                    this.btnEliminar.Enabled = false;
+                }
+                else
+                {
+                    this.btnEditar.Enabled = true;
+                    this.btnEliminar.Enabled = true;
+                }
+            }
+            else {
+                    // En el caso de que no haya conexion a la base de datos se deshabilita los botones
                 MessageBox.Show("No se logro establecer la conexión con la base de datos", "Error"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            this.cargarTabla();
-
-            // Cambia el estado de los botones en caso de que los infractores sean igual que cero, el sistema no habilita los botones, en caso contrario se habilitaran para realizar una modificacion o eliminar.
-            if (state() == 0)
-            {
+                this.btnAgregar.Enabled = false;
                 this.btnEditar.Enabled = false;
                 this.btnEliminar.Enabled = false;
+
+                //Se desactiva la barra de busqueda en caso de no tener conexion
+                this.txtBusqueda.Enabled = false;
             }
-            else { 
-                this.btnEditar.Enabled = true;
-                this.btnEliminar.Enabled = true;
-            }
+            
         }
 
 

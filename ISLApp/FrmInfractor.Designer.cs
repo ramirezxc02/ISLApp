@@ -105,10 +105,12 @@ namespace ISLApp
             // tbCedula
             // 
             this.tbCedula.Location = new System.Drawing.Point(648, 241);
+            this.tbCedula.MaxLength = 9;
             this.tbCedula.Multiline = true;
             this.tbCedula.Name = "tbCedula";
             this.tbCedula.Size = new System.Drawing.Size(289, 33);
             this.tbCedula.TabIndex = 6;
+            this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
             // 
             // tbNombreInfractor
             // 
