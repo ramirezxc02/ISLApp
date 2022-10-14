@@ -16,7 +16,7 @@ namespace ISLApp
     {
         private Conexion conexion;
         private string  nombre, cedula, tipo;
-         int id= 0;
+         int id= 0, actividadIlegal=0;
         public FrmInformeInfractor()
         {
             InitializeComponent();
@@ -50,7 +50,6 @@ namespace ISLApp
             }
             
         }
-
 
         private void FrmInformeInfractor_Load(object sender, EventArgs e)
         {
@@ -87,11 +86,11 @@ namespace ISLApp
         {
             try
             {
-                if (id != 0)
+                if (id != 0 && actividadIlegal !=0)
                 {
                     if (this.conexion.realizarConexion())
                     {
-                        FrmInfractor modificarInfractor = new FrmInfractor(this, true, cedula, nombre, tipo, id);
+                        FrmInfractor modificarInfractor = new FrmInfractor(this, true, cedula, nombre, tipo, id, actividadIlegal);
                         modificarInfractor.Show();
                     }
                     else {
@@ -162,6 +161,7 @@ namespace ISLApp
                 nombre = dgInfractores.CurrentRow.Cells[1].Value.ToString();
                 cedula = dgInfractores.CurrentRow.Cells[2].Value.ToString();
                 tipo = dgInfractores.CurrentRow.Cells[3].Value.ToString();
+                actividadIlegal = int.Parse(dgInfractores.CurrentRow.Cells[4].Value.ToString());
             }
             catch (Exception ex)
             {
@@ -169,6 +169,7 @@ namespace ISLApp
                 nombre = "";
                 cedula = "";
                 tipo = "";
+                actividadIlegal = 0;
                 Console.WriteLine(ex.Message);
                 MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

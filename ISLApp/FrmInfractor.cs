@@ -29,7 +29,7 @@ namespace ISLApp
             this.padre = padre;
         }
 
-        public FrmInfractor(FrmInformeInfractor padre, Boolean modificar, String cedula, String nombre, String tipo, int idInfractor)
+        public FrmInfractor(FrmInformeInfractor padre, Boolean modificar, String cedula, String nombre, String tipo, int idInfractor, int actividadIlegal)
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
@@ -38,6 +38,7 @@ namespace ISLApp
             tbCedula.Text = cedula;
             tbNombreInfractor.Text = nombre;
             cbTipo.Text = tipo;
+            cbActividades.SelectedItem = actividadIlegal;
             this.modificar = modificar;
             this.padre = padre;
             idModificacion = idInfractor;
@@ -45,7 +46,11 @@ namespace ISLApp
 
         private  void FrmInfractor_Load(object sender, EventArgs e)
         {
-            
+            // TODO: esta línea de código carga datos en la tabla 'islaSanLucasBDDataSet.ActividadIlegal' Puede moverla o quitarla según sea necesario.
+            this.actividadIlegalTableAdapter.Fill(this.islaSanLucasBDDataSet.ActividadIlegal);
+            // TODO: esta línea de código carga datos en la tabla 'islaSanLucasBDDataSet.ActividadIlegal' Puede moverla o quitarla según sea necesario.
+            this.actividadIlegalTableAdapter.Fill(this.islaSanLucasBDDataSet.ActividadIlegal);
+
         }
 
         // metodo asincronico que requiere del campo cedula(req) para realizar una busqueda a traves de la api.
@@ -107,6 +112,7 @@ namespace ISLApp
                     infractorBd.cedulaResponsable = tbCedula.Text.Trim();
                     infractorBd.tipoResponsable = this.cbTipo.Text.Trim();
                     infractorBd.estado = true;
+                    infractorBd.actividadIlegal = int.Parse(cbActividades.SelectedValue.ToString());
 
                     try
                     {
@@ -173,6 +179,29 @@ namespace ISLApp
             {
                 e.Handled = true;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.actividadIlegalTableAdapter.FillBy(this.islaSanLucasBDDataSet.ActividadIlegal);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void cbActividades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

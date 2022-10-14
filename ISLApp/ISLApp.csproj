@@ -81,6 +81,14 @@
     <Compile Include="FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="islaSanLucasBDDataSet.cs">
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="islaSanLucasBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmInformeInfractor.resx">
@@ -105,6 +113,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="islaSanLucasBDDataSet.xsc">
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="islaSanLucasBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>islaSanLucasBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="islaSanLucasBDDataSet.xss">
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

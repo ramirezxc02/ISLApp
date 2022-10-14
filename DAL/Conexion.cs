@@ -57,6 +57,7 @@ namespace DAL
                 this.command.Parameters.AddWithValue("@cedulaResponsable", infractor.cedulaResponsable);
                 this.command.Parameters.AddWithValue("@tipoResponsable", infractor.tipoResponsable);
                 this.command.Parameters.AddWithValue("@estado", infractor.estado);
+                this.command.Parameters.AddWithValue("@actividadIlegal", infractor.actividadIlegal);
                 this.command.ExecuteNonQuery();
                 this.command.Parameters.Clear();
                 this.connection.Close();
@@ -169,6 +170,7 @@ namespace DAL
                 this.command.Parameters.AddWithValue("@cedulaResponsable", infractor.cedulaResponsable);
                 this.command.Parameters.AddWithValue("@nombreResponsable", infractor.nombreResponsable);
                 this.command.Parameters.AddWithValue("@tipoResponsable", infractor.tipoResponsable);
+                this.command.Parameters.AddWithValue("@actividadIlegal", infractor.actividadIlegal);
                 this.command.Parameters.AddWithValue("@idResponsable", idModificacion);
                 this.command.ExecuteNonQuery();
                 this.command.Parameters.Clear();

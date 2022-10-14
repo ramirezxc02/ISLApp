@@ -12,5 +12,7 @@ namespace BLL
         public string cedulaResponsable { get; set; }
         public string tipoResponsable { get; set; }
         public Boolean estado { get; set; }
+
+        public int actividadIlegal { get; set; }
     }
 }

@@ -29,6 +29,7 @@ namespace ISLApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,15 +39,23 @@ namespace ISLApp
             this.tbCedula = new System.Windows.Forms.TextBox();
             this.tbNombreInfractor = new System.Windows.Forms.TextBox();
             this.btnBusqueda = new System.Windows.Forms.Button();
+            this.cbActividades = new System.Windows.Forms.ComboBox();
+            this.islaSanLucasBDDataSet = new ISLApp.islaSanLucasBDDataSet();
+            this.label1 = new System.Windows.Forms.Label();
+            this.actividadIlegalBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.actividadIlegalTableAdapter = new ISLApp.islaSanLucasBDDataSetTableAdapters.ActividadIlegalTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.islaSanLucasBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadIlegalBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(181, 70);
+            this.lblTitle.Location = new System.Drawing.Point(272, 108);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(258, 42);
+            this.lblTitle.Size = new System.Drawing.Size(386, 64);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Crear Informe";
             // 
@@ -54,9 +63,10 @@ namespace ISLApp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(383, 241);
+            this.label2.Location = new System.Drawing.Point(574, 371);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 33);
+            this.label2.Size = new System.Drawing.Size(361, 52);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cédula Infractor:";
             // 
@@ -64,9 +74,10 @@ namespace ISLApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(371, 326);
+            this.label3.Location = new System.Drawing.Point(556, 502);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 33);
+            this.label3.Size = new System.Drawing.Size(379, 52);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre Infractor:";
             // 
@@ -74,17 +85,19 @@ namespace ISLApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(545, 406);
+            this.label4.Location = new System.Drawing.Point(818, 625);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 33);
+            this.label4.Size = new System.Drawing.Size(124, 52);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tipo:";
             // 
             // btnCrear
             // 
-            this.btnCrear.Location = new System.Drawing.Point(702, 487);
+            this.btnCrear.Location = new System.Drawing.Point(1052, 891);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(170, 56);
+            this.btnCrear.Size = new System.Drawing.Size(255, 86);
             this.btnCrear.TabIndex = 4;
             this.btnCrear.Text = "Crear informe";
             this.btnCrear.UseVisualStyleBackColor = true;
@@ -97,46 +110,93 @@ namespace ISLApp
             this.cbTipo.Items.AddRange(new object[] {
             "Turista",
             "Capitan"});
-            this.cbTipo.Location = new System.Drawing.Point(648, 418);
+            this.cbTipo.Location = new System.Drawing.Point(972, 643);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(289, 21);
+            this.cbTipo.Size = new System.Drawing.Size(432, 28);
             this.cbTipo.TabIndex = 5;
             // 
             // tbCedula
             // 
-            this.tbCedula.Location = new System.Drawing.Point(648, 241);
+            this.tbCedula.Location = new System.Drawing.Point(972, 371);
+            this.tbCedula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbCedula.MaxLength = 9;
             this.tbCedula.Multiline = true;
             this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(289, 33);
+            this.tbCedula.Size = new System.Drawing.Size(432, 49);
             this.tbCedula.TabIndex = 6;
             this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
             // 
             // tbNombreInfractor
             // 
             this.tbNombreInfractor.Enabled = false;
-            this.tbNombreInfractor.Location = new System.Drawing.Point(648, 326);
+            this.tbNombreInfractor.Location = new System.Drawing.Point(972, 502);
+            this.tbNombreInfractor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNombreInfractor.Multiline = true;
             this.tbNombreInfractor.Name = "tbNombreInfractor";
-            this.tbNombreInfractor.Size = new System.Drawing.Size(289, 33);
+            this.tbNombreInfractor.Size = new System.Drawing.Size(432, 49);
             this.tbNombreInfractor.TabIndex = 7;
             // 
             // btnBusqueda
             // 
             this.btnBusqueda.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBusqueda.Location = new System.Drawing.Point(966, 241);
+            this.btnBusqueda.Location = new System.Drawing.Point(1449, 371);
+            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(110, 33);
+            this.btnBusqueda.Size = new System.Drawing.Size(165, 51);
             this.btnBusqueda.TabIndex = 8;
             this.btnBusqueda.Text = "Buscar";
             this.btnBusqueda.UseVisualStyleBackColor = true;
             this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
             // 
+            // cbActividades
+            // 
+            this.cbActividades.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.actividadIlegalBindingSource, "idActividadIlegal", true));
+            this.cbActividades.DataSource = this.actividadIlegalBindingSource;
+            this.cbActividades.DisplayMember = "nombreActividadIlegal";
+            this.cbActividades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbActividades.FormattingEnabled = true;
+            this.cbActividades.Location = new System.Drawing.Point(972, 769);
+            this.cbActividades.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbActividades.Name = "cbActividades";
+            this.cbActividades.Size = new System.Drawing.Size(432, 28);
+            this.cbActividades.TabIndex = 9;
+            this.cbActividades.ValueMember = "idActividadIlegal";
+            this.cbActividades.SelectedIndexChanged += new System.EventHandler(this.cbActividades_SelectedIndexChanged);
+            // 
+            // islaSanLucasBDDataSet
+            // 
+            this.islaSanLucasBDDataSet.DataSetName = "islaSanLucasBDDataSet";
+            this.islaSanLucasBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(604, 745);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(344, 52);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Actividad Ilegal:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // actividadIlegalBindingSource
+            // 
+            this.actividadIlegalBindingSource.DataMember = "ActividadIlegal";
+            this.actividadIlegalBindingSource.DataSource = this.islaSanLucasBDDataSet;
+            // 
+            // actividadIlegalTableAdapter
+            // 
+            this.actividadIlegalTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmInfractor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbActividades);
             this.Controls.Add(this.btnBusqueda);
             this.Controls.Add(this.tbNombreInfractor);
             this.Controls.Add(this.tbCedula);
@@ -146,9 +206,14 @@ namespace ISLApp
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitle);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmInfractor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmInfractor_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.islaSanLucasBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadIlegalBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -165,5 +230,10 @@ namespace ISLApp
         private System.Windows.Forms.TextBox tbCedula;
         private System.Windows.Forms.TextBox tbNombreInfractor;
         private System.Windows.Forms.Button btnBusqueda;
+        private System.Windows.Forms.ComboBox cbActividades;
+        private System.Windows.Forms.Label label1;
+        private islaSanLucasBDDataSet islaSanLucasBDDataSet;
+        private System.Windows.Forms.BindingSource actividadIlegalBindingSource;
+        private islaSanLucasBDDataSetTableAdapters.ActividadIlegalTableAdapter actividadIlegalTableAdapter;
     }
 }
