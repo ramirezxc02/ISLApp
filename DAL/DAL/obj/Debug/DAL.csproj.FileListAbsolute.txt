@@ -1,9 +1,0 @@
-C:\ProyectoIslaSanLucas\ISLApp\DAL\bin\Debug\DAL.dll
-C:\ProyectoIslaSanLucas\ISLApp\DAL\bin\Debug\DAL.pdb
-C:\ProyectoIslaSanLucas\ISLApp\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
-C:\ProyectoIslaSanLucas\ISLApp\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-C:\ProyectoIslaSanLucas\ISLApp\DAL\obj\Debug\DAL.dll
-C:\ProyectoIslaSanLucas\ISLApp\DAL\obj\Debug\DAL.pdb
-C:\ProyectoIslaSanLucas\ISLApp\DAL\bin\Debug\BLL.dll
-C:\ProyectoIslaSanLucas\ISLApp\DAL\bin\Debug\BLL.pdb
-C:\ProyectoIslaSanLucas\ISLApp\DAL\obj\Debug\DAL.csproj.CopyComplete

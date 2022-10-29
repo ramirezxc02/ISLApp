@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +52,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAgregarReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarReporte.Designer.cs">
+      <DependentUpon>FrmAgregarReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInformeInfractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInformeInfractor.Designer.cs">
+      <DependentUpon>FrmInformeInfractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInfractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInfractor.Designer.cs">
+      <DependentUpon>FrmInfractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarUsuario.Designer.cs">
+      <DependentUpon>FrmRegistrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporte.cs">
       <SubType>Form</SubType>
@@ -64,10 +100,43 @@
     <Compile Include="FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVerInfractor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerInfractor.Designer.cs">
+      <DependentUpon>FrmVerInfractor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islaSanLucasBDDataSet.cs">
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="islaSanLucasBDDataSet.Designer.cs">
+      <DependentUpon>islaSanLucasBDDataSet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAgregarReporte.resx">
+      <DependentUpon>FrmAgregarReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInformeInfractor.resx">
+      <DependentUpon>FrmInformeInfractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInfractor.resx">
+      <DependentUpon>FrmInfractor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarUsuario.resx">
+      <DependentUpon>FrmRegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsuario.resx">
+      <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerInfractor.resx">
+      <DependentUpon>FrmVerInfractor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,7 +146,20 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="islaSanLucasBDDataSet.xsc">
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="islaSanLucasBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>islaSanLucasBDDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="islaSanLucasBDDataSet.xss">
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +172,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{A4F4902F-1FD9-42DE-9415-02DD3DDF20A2}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{DD6FF4B5-759E-461D-B8F7-A89EBAAFFD1F}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
