@@ -330,5 +330,15 @@ namespace ISLApp
             //liberamos los recursos de memoria
             frm.Close();
         }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
