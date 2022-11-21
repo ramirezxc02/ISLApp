@@ -40,42 +40,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(1059, 406);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 29);
+            this.label1.Size = new System.Drawing.Size(199, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre de usuario:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(1059, 510);
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1059, 533);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 29);
+            this.label2.Size = new System.Drawing.Size(123, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña:";
             // 
             // TxtUsername
             // 
-            this.TxtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsername.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsername.Location = new System.Drawing.Point(1064, 454);
             this.TxtUsername.MaxLength = 50;
             this.TxtUsername.Multiline = true;
             this.TxtUsername.Name = "TxtUsername";
-            this.TxtUsername.Size = new System.Drawing.Size(386, 39);
+            this.TxtUsername.Size = new System.Drawing.Size(386, 44);
             this.TxtUsername.TabIndex = 2;
             // 
             // TxtPassword
             // 
-            this.TxtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPassword.Location = new System.Drawing.Point(1064, 549);
+            this.TxtPassword.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtPassword.Location = new System.Drawing.Point(1064, 572);
             this.TxtPassword.MaxLength = 16;
             this.TxtPassword.Multiline = true;
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '*';
-            this.TxtPassword.Size = new System.Drawing.Size(386, 39);
+            this.TxtPassword.Size = new System.Drawing.Size(386, 44);
             this.TxtPassword.TabIndex = 3;
             // 
             // BtnIngresar
@@ -83,8 +83,8 @@
             this.BtnIngresar.BackColor = System.Drawing.Color.Beige;
             this.BtnIngresar.FlatAppearance.BorderSize = 0;
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIngresar.Location = new System.Drawing.Point(1064, 626);
+            this.BtnIngresar.Font = new System.Drawing.Font("Microsoft JhengHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIngresar.Location = new System.Drawing.Point(1064, 672);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(386, 61);
             this.BtnIngresar.TabIndex = 4;
@@ -96,6 +96,7 @@
             // 
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iconButton1.ForeColor = System.Drawing.Color.OliveDrab;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.UserCircle;
             this.iconButton1.IconColor = System.Drawing.Color.Beige;
@@ -116,7 +117,7 @@
             this.iconButton2.IconColor = System.Drawing.Color.Beige;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 60;
-            this.iconButton2.Location = new System.Drawing.Point(1765, 3);
+            this.iconButton2.Location = new System.Drawing.Point(1765, -22);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(157, 105);
             this.iconButton2.TabIndex = 6;

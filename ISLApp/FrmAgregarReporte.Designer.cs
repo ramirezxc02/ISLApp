@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxNumeroOficio = new System.Windows.Forms.TextBox();
@@ -78,18 +79,20 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.iconButtonBuscarIDInfractor = new FontAwesome.Sharp.IconButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.islaSanLucasBDDataSet = new ISLApp.islaSanLucasBDDataSet();
             this.infractorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.infractorTableAdapter = new ISLApp.islaSanLucasBDDataSetTableAdapters.InfractorTableAdapter();
-            this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
-            this.iconButtonBuscarIDInfractor = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.islaSanLucasBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infractorBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -107,6 +110,20 @@
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(1942, 80);
             this.panelTitleBar.TabIndex = 4;
+            // 
+            // iconButtonRegresar
+            // 
+            this.iconButtonRegresar.FlatAppearance.BorderSize = 0;
+            this.iconButtonRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonRegresar.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.iconButtonRegresar.IconColor = System.Drawing.Color.White;
+            this.iconButtonRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonRegresar.Location = new System.Drawing.Point(1785, 16);
+            this.iconButtonRegresar.Name = "iconButtonRegresar";
+            this.iconButtonRegresar.Size = new System.Drawing.Size(74, 65);
+            this.iconButtonRegresar.TabIndex = 37;
+            this.iconButtonRegresar.UseVisualStyleBackColor = true;
+            this.iconButtonRegresar.Click += new System.EventHandler(this.iconButtonRegresar_Click);
             // 
             // labelTitle
             // 
@@ -295,7 +312,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F);
-            this.label18.Location = new System.Drawing.Point(1424, 22);
+            this.label18.Location = new System.Drawing.Point(1423, 22);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(63, 23);
             this.label18.TabIndex = 42;
@@ -306,11 +323,11 @@
             this.buttonAcciones.BackColor = System.Drawing.Color.DarkGreen;
             this.buttonAcciones.FlatAppearance.BorderSize = 0;
             this.buttonAcciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAcciones.Location = new System.Drawing.Point(786, 934);
+            this.buttonAcciones.Font = new System.Drawing.Font("Microsoft JhengHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAcciones.Location = new System.Drawing.Point(799, 41);
             this.buttonAcciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAcciones.Name = "buttonAcciones";
-            this.buttonAcciones.Size = new System.Drawing.Size(373, 62);
+            this.buttonAcciones.Size = new System.Drawing.Size(353, 46);
             this.buttonAcciones.TabIndex = 44;
             this.buttonAcciones.Text = "GUARDAR";
             this.buttonAcciones.UseVisualStyleBackColor = false;
@@ -320,7 +337,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F);
-            this.label19.Location = new System.Drawing.Point(1000, 22);
+            this.label19.Location = new System.Drawing.Point(1026, 22);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(111, 23);
             this.label19.TabIndex = 45;
@@ -352,17 +369,18 @@
             // dateTimeFechaReporte
             // 
             this.dateTimeFechaReporte.CustomFormat = "dd-mm-yyyy";
-            this.dateTimeFechaReporte.Location = new System.Drawing.Point(1425, 65);
+            this.dateTimeFechaReporte.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFechaReporte.Location = new System.Drawing.Point(1427, 58);
             this.dateTimeFechaReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeFechaReporte.Name = "dateTimeFechaReporte";
             this.dateTimeFechaReporte.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimeFechaReporte.Size = new System.Drawing.Size(300, 22);
+            this.dateTimeFechaReporte.Size = new System.Drawing.Size(373, 31);
             this.dateTimeFechaReporte.TabIndex = 48;
             // 
             // textBoxIDInfractor
             // 
             this.textBoxIDInfractor.Enabled = false;
-            this.textBoxIDInfractor.Location = new System.Drawing.Point(997, 58);
+            this.textBoxIDInfractor.Location = new System.Drawing.Point(1023, 58);
             this.textBoxIDInfractor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIDInfractor.Multiline = true;
             this.textBoxIDInfractor.Name = "textBoxIDInfractor";
@@ -533,10 +551,11 @@
             // checkBoxOeste
             // 
             this.checkBoxOeste.AutoSize = true;
+            this.checkBoxOeste.Font = new System.Drawing.Font("Microsoft JhengHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxOeste.Location = new System.Drawing.Point(484, 564);
             this.checkBoxOeste.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxOeste.Name = "checkBoxOeste";
-            this.checkBoxOeste.Size = new System.Drawing.Size(343, 20);
+            this.checkBoxOeste.Size = new System.Drawing.Size(333, 21);
             this.checkBoxOeste.TabIndex = 69;
             this.checkBoxOeste.Text = "Oeste de Playa Bella Vista hasta Playa Tumbabotes";
             this.checkBoxOeste.UseVisualStyleBackColor = true;
@@ -555,10 +574,11 @@
             // checkBoxEste
             // 
             this.checkBoxEste.AutoSize = true;
+            this.checkBoxEste.Font = new System.Drawing.Font("Microsoft JhengHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxEste.Location = new System.Drawing.Point(484, 518);
             this.checkBoxEste.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxEste.Name = "checkBoxEste";
-            this.checkBoxEste.Size = new System.Drawing.Size(291, 20);
+            this.checkBoxEste.Size = new System.Drawing.Size(281, 21);
             this.checkBoxEste.TabIndex = 71;
             this.checkBoxEste.Text = "Este desde Playa Limón hasta Playa Cocos";
             this.checkBoxEste.UseVisualStyleBackColor = true;
@@ -566,20 +586,20 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(72, 270);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(120, 29);
+            this.label20.Size = new System.Drawing.Size(121, 29);
             this.label20.TabIndex = 73;
             this.label20.Text = "Recorrido";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(21, 20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(131, 29);
+            this.label21.Size = new System.Drawing.Size(132, 29);
             this.label21.TabIndex = 74;
             this.label21.Text = "Transporte";
             // 
@@ -600,6 +620,21 @@
             this.groupBox2.TabIndex = 76;
             this.groupBox2.TabStop = false;
             // 
+            // iconButtonBuscarIDInfractor
+            // 
+            this.iconButtonBuscarIDInfractor.FlatAppearance.BorderSize = 0;
+            this.iconButtonBuscarIDInfractor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonBuscarIDInfractor.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButtonBuscarIDInfractor.IconColor = System.Drawing.Color.Black;
+            this.iconButtonBuscarIDInfractor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonBuscarIDInfractor.IconSize = 40;
+            this.iconButtonBuscarIDInfractor.Location = new System.Drawing.Point(1281, 40);
+            this.iconButtonBuscarIDInfractor.Name = "iconButtonBuscarIDInfractor";
+            this.iconButtonBuscarIDInfractor.Size = new System.Drawing.Size(87, 53);
+            this.iconButtonBuscarIDInfractor.TabIndex = 73;
+            this.iconButtonBuscarIDInfractor.UseVisualStyleBackColor = true;
+            this.iconButtonBuscarIDInfractor.Click += new System.EventHandler(this.iconButtonBuscarIDInfractor_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBoxCentroOperativo);
@@ -611,11 +646,20 @@
             this.groupBox3.Controls.Add(this.dateTimeHoraFinal);
             this.groupBox3.Controls.Add(this.textBoxKmFinal);
             this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Location = new System.Drawing.Point(36, 250);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(965, 653);
+            this.groupBox3.Size = new System.Drawing.Size(991, 653);
             this.groupBox3.TabIndex = 77;
             this.groupBox3.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(386, 659);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(941, 134);
+            this.groupBox4.TabIndex = 79;
+            this.groupBox4.TabStop = false;
             // 
             // groupBox1
             // 
@@ -636,11 +680,20 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Location = new System.Drawing.Point(1007, 250);
+            this.groupBox1.Location = new System.Drawing.Point(1033, 250);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(896, 653);
             this.groupBox1.TabIndex = 78;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.buttonAcciones);
+            this.groupBox5.Location = new System.Drawing.Point(36, 909);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1867, 116);
+            this.groupBox5.TabIndex = 79;
+            this.groupBox5.TabStop = false;
             // 
             // islaSanLucasBDDataSet
             // 
@@ -656,35 +709,6 @@
             // 
             this.infractorTableAdapter.ClearBeforeFill = true;
             // 
-            // iconButtonRegresar
-            // 
-            this.iconButtonRegresar.FlatAppearance.BorderSize = 0;
-            this.iconButtonRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonRegresar.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconButtonRegresar.IconColor = System.Drawing.Color.White;
-            this.iconButtonRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonRegresar.Location = new System.Drawing.Point(1713, 16);
-            this.iconButtonRegresar.Name = "iconButtonRegresar";
-            this.iconButtonRegresar.Size = new System.Drawing.Size(74, 65);
-            this.iconButtonRegresar.TabIndex = 37;
-            this.iconButtonRegresar.UseVisualStyleBackColor = true;
-            this.iconButtonRegresar.Click += new System.EventHandler(this.iconButtonRegresar_Click);
-            // 
-            // iconButtonBuscarIDInfractor
-            // 
-            this.iconButtonBuscarIDInfractor.FlatAppearance.BorderSize = 0;
-            this.iconButtonBuscarIDInfractor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonBuscarIDInfractor.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButtonBuscarIDInfractor.IconColor = System.Drawing.Color.Black;
-            this.iconButtonBuscarIDInfractor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonBuscarIDInfractor.IconSize = 40;
-            this.iconButtonBuscarIDInfractor.Location = new System.Drawing.Point(1255, 40);
-            this.iconButtonBuscarIDInfractor.Name = "iconButtonBuscarIDInfractor";
-            this.iconButtonBuscarIDInfractor.Size = new System.Drawing.Size(87, 53);
-            this.iconButtonBuscarIDInfractor.TabIndex = 73;
-            this.iconButtonBuscarIDInfractor.UseVisualStyleBackColor = true;
-            this.iconButtonBuscarIDInfractor.Click += new System.EventHandler(this.iconButtonBuscarIDInfractor_Click);
-            // 
             // FrmAgregarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -697,7 +721,6 @@
             this.Controls.Add(this.textBoxKmInicial);
             this.Controls.Add(this.textBoxCodigoPresupuestario);
             this.Controls.Add(this.dateTimeHoraInicio);
-            this.Controls.Add(this.buttonAcciones);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
@@ -705,6 +728,7 @@
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmAgregarReporte";
@@ -720,6 +744,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.islaSanLucasBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infractorBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -785,5 +810,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton iconButtonRegresar;
         private FontAwesome.Sharp.IconButton iconButtonBuscarIDInfractor;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }
