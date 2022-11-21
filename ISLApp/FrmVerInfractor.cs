@@ -60,5 +60,15 @@ namespace ISLApp
             frmAddRep.textBoxIDInfractor.Text = this.dtgDatos.CurrentRow.Cells[0].Value.ToString();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void iconButtonRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

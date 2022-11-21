@@ -169,7 +169,55 @@ namespace ISLApp
             }
         }
 
- 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
+
+            frmRegistrarUsuario.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (this.DgUsuarios.CurrentRow != null)
+                {
+
+                    string nombreUsuario = DgUsuarios.CurrentRow.Cells[0].Value.ToString();
+                    FrmRegistrarUsuario frm = new FrmRegistrarUsuario(nombreUsuario);
+                    frm.BtnAgregar.Text = "Modificar Usuario";
+                    frm.BtnAgregar.Text = "Editar";
+                    frm.TxtNombreUsuario.Text = DgUsuarios.CurrentRow.Cells[0].Value.ToString();
+                    frm.TxtCorreo.Text = DgUsuarios.CurrentRow.Cells[1].Value.ToString();
+                    frm.CbRol.Text = DgUsuarios.CurrentRow.Cells[2].Value.ToString();
+                    frm.TxtContrasenia.Text = DgUsuarios.CurrentRow.Cells[3].Value.ToString();
+                    frm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar una fila", "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EliminarUsuario();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }//fin de la clase
 }//fin del namespace

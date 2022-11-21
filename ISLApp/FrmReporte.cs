@@ -97,12 +97,23 @@ namespace ISLApp
 
         private void FrmReporte_Load(object sender, EventArgs e)
         {
+            this.AjustarDataGridAltura();
             this.mostrarReporte();
+          
+        }
+
+        private void AjustarDataGridAltura()
+        {
+            var altura = dataGridDatos.ColumnHeadersHeight;
+            foreach(DataGridViewRow dr in dataGridDatos.Rows)
+            {
+                altura += dr.Height;
+            }
+            dataGridDatos.Height = altura;
         }
 
         private void FrmReporte_Activated(object sender, EventArgs e)
         {
-            this.mostrarReporte();
         }
 
 
