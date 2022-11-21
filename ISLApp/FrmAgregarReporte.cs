@@ -340,5 +340,16 @@ namespace ISLApp
         {
 
         }
+
+        private void iconButtonRegresar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButtonBuscarIDInfractor_Click(object sender, EventArgs e)
+        {
+            this.mostrarVerInfrac();
+
+        }
     }
 }

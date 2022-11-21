@@ -29,168 +29,157 @@
         private void InitializeComponent()
         {
             this.panelSlideMenu = new System.Windows.Forms.Panel();
-            this.BtnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnReporte = new System.Windows.Forms.Button();
-            this.BtnUsuario = new System.Windows.Forms.Button();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.btnCrearInforme = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButtonUsuario = new FontAwesome.Sharp.IconButton();
+            this.iconButtonConsultar = new FontAwesome.Sharp.IconButton();
+            this.iconButtonReporte = new FontAwesome.Sharp.IconButton();
+            this.iconButtonInforme = new FontAwesome.Sharp.IconButton();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelSlideMenu.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSlideMenu
             // 
-            this.panelSlideMenu.BackColor = System.Drawing.Color.Gray;
-            this.panelSlideMenu.Controls.Add(this.BtnCerrarSesion);
-            this.panelSlideMenu.Controls.Add(this.btnReporte);
-            this.panelSlideMenu.Controls.Add(this.BtnUsuario);
-            this.panelSlideMenu.Controls.Add(this.btnConsultar);
-            this.panelSlideMenu.Controls.Add(this.btnCrearInforme);
-            this.panelSlideMenu.Controls.Add(this.panel2);
+            this.panelSlideMenu.BackColor = System.Drawing.Color.OliveDrab;
+            this.panelSlideMenu.Controls.Add(this.iconButton1);
+            this.panelSlideMenu.Controls.Add(this.iconButtonUsuario);
+            this.panelSlideMenu.Controls.Add(this.iconButtonConsultar);
+            this.panelSlideMenu.Controls.Add(this.iconButtonReporte);
+            this.panelSlideMenu.Controls.Add(this.iconButtonInforme);
             this.panelSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSlideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSlideMenu.Name = "panelSlideMenu";
-            this.panelSlideMenu.Size = new System.Drawing.Size(251, 658);
+            this.panelSlideMenu.Size = new System.Drawing.Size(264, 1055);
             this.panelSlideMenu.TabIndex = 0;
             // 
-            // BtnCerrarSesion
+            // iconButton1
             // 
-            this.BtnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.BtnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrarSesion.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCerrarSesion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnCerrarSesion.Location = new System.Drawing.Point(0, 612);
-            this.BtnCerrarSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
-            this.BtnCerrarSesion.Size = new System.Drawing.Size(251, 46);
-            this.BtnCerrarSesion.TabIndex = 5;
-            this.BtnCerrarSesion.Text = "Cerrar sesión";
-            this.BtnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnCerrarSesion.UseVisualStyleBackColor = true;
-            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.Location = new System.Drawing.Point(0, 973);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(264, 82);
+            this.iconButton1.TabIndex = 9;
+            this.iconButton1.Text = "Cerrar sesión";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
-            // btnReporte
+            // iconButtonUsuario
             // 
-            this.btnReporte.FlatAppearance.BorderSize = 0;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReporte.Location = new System.Drawing.Point(-3, 135);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Padding = new System.Windows.Forms.Padding(12, 0, 0, 5);
-            this.btnReporte.Size = new System.Drawing.Size(251, 46);
-            this.btnReporte.TabIndex = 4;
-            this.btnReporte.Text = "Reporte";
-            this.btnReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.button3_Click);
+            this.iconButtonUsuario.FlatAppearance.BorderSize = 0;
+            this.iconButtonUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonUsuario.ForeColor = System.Drawing.Color.White;
+            this.iconButtonUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButtonUsuario.IconColor = System.Drawing.Color.White;
+            this.iconButtonUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonUsuario.IconSize = 32;
+            this.iconButtonUsuario.Location = new System.Drawing.Point(3, 406);
+            this.iconButtonUsuario.Name = "iconButtonUsuario";
+            this.iconButtonUsuario.Size = new System.Drawing.Size(258, 82);
+            this.iconButtonUsuario.TabIndex = 8;
+            this.iconButtonUsuario.Text = "Usuario";
+            this.iconButtonUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonUsuario.UseVisualStyleBackColor = true;
+            this.iconButtonUsuario.Click += new System.EventHandler(this.iconButtonUsuario_Click);
             // 
-            // BtnUsuario
+            // iconButtonConsultar
             // 
-            this.BtnUsuario.FlatAppearance.BorderSize = 0;
-            this.BtnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnUsuario.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.BtnUsuario.Location = new System.Drawing.Point(-3, 235);
-            this.BtnUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnUsuario.Name = "BtnUsuario";
-            this.BtnUsuario.Padding = new System.Windows.Forms.Padding(12, 0, 0, 5);
-            this.BtnUsuario.Size = new System.Drawing.Size(251, 46);
-            this.BtnUsuario.TabIndex = 3;
-            this.BtnUsuario.Text = "Usuario";
-            this.BtnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnUsuario.UseVisualStyleBackColor = true;
-            this.BtnUsuario.Click += new System.EventHandler(this.BtnUsuario_Click);
+            this.iconButtonConsultar.FlatAppearance.BorderSize = 0;
+            this.iconButtonConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonConsultar.ForeColor = System.Drawing.Color.White;
+            this.iconButtonConsultar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButtonConsultar.IconColor = System.Drawing.Color.White;
+            this.iconButtonConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonConsultar.IconSize = 32;
+            this.iconButtonConsultar.Location = new System.Drawing.Point(0, 322);
+            this.iconButtonConsultar.Name = "iconButtonConsultar";
+            this.iconButtonConsultar.Size = new System.Drawing.Size(261, 82);
+            this.iconButtonConsultar.TabIndex = 7;
+            this.iconButtonConsultar.Text = "Consultar";
+            this.iconButtonConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonConsultar.UseVisualStyleBackColor = true;
             // 
-            // btnConsultar
+            // iconButtonReporte
             // 
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConsultar.Location = new System.Drawing.Point(-3, 185);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Padding = new System.Windows.Forms.Padding(12, 0, 0, 5);
-            this.btnConsultar.Size = new System.Drawing.Size(251, 46);
-            this.btnConsultar.TabIndex = 2;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.iconButtonReporte.FlatAppearance.BorderSize = 0;
+            this.iconButtonReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonReporte.ForeColor = System.Drawing.Color.White;
+            this.iconButtonReporte.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.iconButtonReporte.IconColor = System.Drawing.Color.White;
+            this.iconButtonReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonReporte.IconSize = 32;
+            this.iconButtonReporte.Location = new System.Drawing.Point(3, 236);
+            this.iconButtonReporte.Name = "iconButtonReporte";
+            this.iconButtonReporte.Size = new System.Drawing.Size(258, 82);
+            this.iconButtonReporte.TabIndex = 6;
+            this.iconButtonReporte.TabStop = false;
+            this.iconButtonReporte.Text = "Reporte";
+            this.iconButtonReporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonReporte.UseVisualStyleBackColor = true;
+            this.iconButtonReporte.Click += new System.EventHandler(this.iconButtonReporte_Click);
             // 
-            // btnCrearInforme
+            // iconButtonInforme
             // 
-            this.btnCrearInforme.FlatAppearance.BorderSize = 0;
-            this.btnCrearInforme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCrearInforme.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearInforme.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCrearInforme.Location = new System.Drawing.Point(0, 78);
-            this.btnCrearInforme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCrearInforme.Name = "btnCrearInforme";
-            this.btnCrearInforme.Padding = new System.Windows.Forms.Padding(12, 0, 0, 5);
-            this.btnCrearInforme.Size = new System.Drawing.Size(251, 53);
-            this.btnCrearInforme.TabIndex = 1;
-            this.btnCrearInforme.Text = "Crear informe";
-            this.btnCrearInforme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCrearInforme.UseVisualStyleBackColor = true;
-            this.btnCrearInforme.Click += new System.EventHandler(this.btnCrearInforme_Click);
+            this.iconButtonInforme.FlatAppearance.BorderSize = 0;
+            this.iconButtonInforme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonInforme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButtonInforme.ForeColor = System.Drawing.Color.White;
+            this.iconButtonInforme.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
+            this.iconButtonInforme.IconColor = System.Drawing.Color.White;
+            this.iconButtonInforme.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButtonInforme.IconSize = 32;
+            this.iconButtonInforme.Location = new System.Drawing.Point(0, 152);
+            this.iconButtonInforme.Name = "iconButtonInforme";
+            this.iconButtonInforme.Size = new System.Drawing.Size(261, 82);
+            this.iconButtonInforme.TabIndex = 3;
+            this.iconButtonInforme.Text = "Informe";
+            this.iconButtonInforme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonInforme.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButtonInforme.UseVisualStyleBackColor = true;
+            this.iconButtonInforme.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // panel2
+            // panelPrincipal
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 80);
-            this.panel2.TabIndex = 1;
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.OliveDrab;
-            this.panelTitleBar.Controls.Add(this.labelTitle);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(251, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1021, 80);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(471, 25);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(99, 34);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "HOME";
+            this.panelPrincipal.BackColor = System.Drawing.Color.Beige;
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(264, 0);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(1660, 1055);
+            this.panelPrincipal.TabIndex = 2;
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1272, 658);
-            this.Controls.Add(this.panelTitleBar);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelSlideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(899, 448);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSlideMenu.ResumeLayout(false);
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -198,13 +187,11 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSlideMenu;
-        private System.Windows.Forms.Button BtnCerrarSesion;
-        private System.Windows.Forms.Button btnReporte;
-        public System.Windows.Forms.Button BtnUsuario;
-        private System.Windows.Forms.Button btnConsultar;
-        private System.Windows.Forms.Button btnCrearInforme;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label labelTitle;
+        private FontAwesome.Sharp.IconButton iconButtonInforme;
+        private FontAwesome.Sharp.IconButton iconButtonConsultar;
+        private FontAwesome.Sharp.IconButton iconButtonReporte;
+        public FontAwesome.Sharp.IconButton iconButtonUsuario;
+        public FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Panel panelPrincipal;
     }
 }

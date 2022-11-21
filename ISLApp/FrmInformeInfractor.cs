@@ -197,6 +197,70 @@ namespace ISLApp
             }
         }
 
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+
+            FrmInfractor infractor = new FrmInfractor(this);
+            infractor.Show();
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id != 0 && actividadIlegal != 0)
+                {
+                    if (this.conexion.realizarConexion())
+                    {
+                        FrmInfractor modificarInfractor = new FrmInfractor(this, true, cedula, nombre, tipo, id, actividadIlegal);
+                        modificarInfractor.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Revise la conexión con internet o su conexión con la base de datos", "No se encontro la base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar un dato valido", "Datos vacios", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Ocurrio un problema al seleccionar los datos", "Error al seleccionar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (id != 0)
+                {
+                    if (this.conexion.realizarConexion())
+                    {
+                        conexion.deshabilitar(id);
+                        MessageBox.Show("Se ha eliminado de manera correcta", "Proceso realizado de manera correcta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.cargarTabla();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Revise la conexión con internet o su conexión con la base de datos", "No se encontro la base de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Debe seleccionar a un infractor", "Sin selección", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocurrio un error" + ex);
+                MessageBox.Show("Se encontro un error: Error de base datos ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         //Metodo que activa los botones de editar y modificar si la cantidad de infractores registrados activos son mayores a 0
         public void activarBotones()
         {

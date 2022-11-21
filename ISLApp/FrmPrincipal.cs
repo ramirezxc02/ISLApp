@@ -16,7 +16,9 @@ namespace ISLApp
     {
         FrmInformeInfractor frmInforme;
         FrmUsuario frmUsuario;
-        
+        private Form activeForm = null;
+
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -28,6 +30,23 @@ namespace ISLApp
         {
             return Settings.Default.StrConexion;
         }
+
+        public void abrirFormularioHijo(Form formularioHijo)
+        {
+            if (activeForm != null)
+                    activeForm.Close();
+                    activeForm = formularioHijo;
+                    formularioHijo.TopLevel = false;
+                    formularioHijo.FormBorderStyle = FormBorderStyle.None;
+                    formularioHijo.Dock = DockStyle.Fill;
+                    panelPrincipal.Controls.Add(formularioHijo);
+                    panelPrincipal.Tag = formularioHijo;
+                    formularioHijo.BringToFront();
+                    formularioHijo.Show();
+
+
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (frmInforme != null)
@@ -71,6 +90,45 @@ namespace ISLApp
 
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            DialogResult boton = MessageBox.Show("¿Está seguro que desea cerrar la sesión?", "Warning",
+                      MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (boton == DialogResult.OK)
+            {
+                Application.Exit();
+
+            }
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            this.abrirFormularioHijo(new FrmInformeInfractor());
+
+        }
+
+        private void iconButtonReporte_Click(object sender, EventArgs e)
+        {
+            this.abrirFormularioHijo(new FrmReporte());
+
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            if (frmInforme != null)
+            {
+                frmInforme.Dispose();
+                frmInforme = null;
+            }
+            frmUsuario = new FrmUsuario();
+            frmUsuario.Show();
+        }
+
+        private void iconButtonUsuario_Click(object sender, EventArgs e)
+        {
+            this.abrirFormularioHijo(new FrmUsuario());
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
         {
             DialogResult boton = MessageBox.Show("¿Está seguro que desea cerrar la sesión?", "Warning",
                       MessageBoxButtons.OKCancel, MessageBoxIcon.Question);

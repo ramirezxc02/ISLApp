@@ -22,6 +22,7 @@ namespace ISLApp
             this.conexion = new Conexion(FrmPrincipal.getStringConexion()); // obtiene la conexion para la base de datos.
             
             InitializeComponent();
+
         }
 
         private void BtnIngresar_Click(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace ISLApp
                         {
                             frm = new FrmPrincipal();
                             if (rol.Equals("Usuario")){
-                                frm.BtnUsuario.Visible = false;
+                                frm.iconButtonUsuario.Visible = false;
                             }
                             frm.Show();
                             this.Hide();
@@ -106,6 +107,9 @@ namespace ISLApp
             return valid;
         }
 
-        
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }//fin clase 
 }// fin de namespace
