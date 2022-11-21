@@ -82,8 +82,8 @@
             this.iconButtonBuscarIDInfractor = new FontAwesome.Sharp.IconButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.islaSanLucasBDDataSet = new ISLApp.islaSanLucasBDDataSet();
             this.infractorBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -118,7 +118,7 @@
             this.iconButtonRegresar.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
             this.iconButtonRegresar.IconColor = System.Drawing.Color.White;
             this.iconButtonRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonRegresar.Location = new System.Drawing.Point(1713, 16);
+            this.iconButtonRegresar.Location = new System.Drawing.Point(1785, 16);
             this.iconButtonRegresar.Name = "iconButtonRegresar";
             this.iconButtonRegresar.Size = new System.Drawing.Size(74, 65);
             this.iconButtonRegresar.TabIndex = 37;
@@ -653,6 +653,14 @@
             this.groupBox3.TabIndex = 77;
             this.groupBox3.TabStop = false;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(386, 659);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(941, 134);
+            this.groupBox4.TabIndex = 79;
+            this.groupBox4.TabStop = false;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label21);
@@ -677,14 +685,6 @@
             this.groupBox1.Size = new System.Drawing.Size(896, 653);
             this.groupBox1.TabIndex = 78;
             this.groupBox1.TabStop = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Location = new System.Drawing.Point(386, 659);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(941, 134);
-            this.groupBox4.TabIndex = 79;
-            this.groupBox4.TabStop = false;
             // 
             // groupBox5
             // 
