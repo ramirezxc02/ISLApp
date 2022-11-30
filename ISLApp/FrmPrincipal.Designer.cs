@@ -48,9 +48,9 @@
             this.panelSlideMenu.Controls.Add(this.iconButtonInforme);
             this.panelSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSlideMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSlideMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelSlideMenu.Name = "panelSlideMenu";
-            this.panelSlideMenu.Size = new System.Drawing.Size(264, 1055);
+            this.panelSlideMenu.Size = new System.Drawing.Size(198, 857);
             this.panelSlideMenu.TabIndex = 0;
             // 
             // iconButton1
@@ -64,9 +64,10 @@
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 32;
-            this.iconButton1.Location = new System.Drawing.Point(0, 973);
+            this.iconButton1.Location = new System.Drawing.Point(0, 790);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(264, 82);
+            this.iconButton1.Size = new System.Drawing.Size(198, 67);
             this.iconButton1.TabIndex = 9;
             this.iconButton1.Text = "Cerrar sesión";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,9 +85,10 @@
             this.iconButtonUsuario.IconColor = System.Drawing.Color.White;
             this.iconButtonUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonUsuario.IconSize = 32;
-            this.iconButtonUsuario.Location = new System.Drawing.Point(3, 406);
+            this.iconButtonUsuario.Location = new System.Drawing.Point(2, 330);
+            this.iconButtonUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButtonUsuario.Name = "iconButtonUsuario";
-            this.iconButtonUsuario.Size = new System.Drawing.Size(258, 82);
+            this.iconButtonUsuario.Size = new System.Drawing.Size(194, 67);
             this.iconButtonUsuario.TabIndex = 8;
             this.iconButtonUsuario.Text = "Usuario";
             this.iconButtonUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,9 +106,10 @@
             this.iconButtonConsultar.IconColor = System.Drawing.Color.White;
             this.iconButtonConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonConsultar.IconSize = 32;
-            this.iconButtonConsultar.Location = new System.Drawing.Point(0, 322);
+            this.iconButtonConsultar.Location = new System.Drawing.Point(0, 262);
+            this.iconButtonConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButtonConsultar.Name = "iconButtonConsultar";
-            this.iconButtonConsultar.Size = new System.Drawing.Size(261, 82);
+            this.iconButtonConsultar.Size = new System.Drawing.Size(196, 67);
             this.iconButtonConsultar.TabIndex = 7;
             this.iconButtonConsultar.Text = "Consultar";
             this.iconButtonConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,9 +126,10 @@
             this.iconButtonReporte.IconColor = System.Drawing.Color.White;
             this.iconButtonReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonReporte.IconSize = 32;
-            this.iconButtonReporte.Location = new System.Drawing.Point(3, 236);
+            this.iconButtonReporte.Location = new System.Drawing.Point(2, 192);
+            this.iconButtonReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButtonReporte.Name = "iconButtonReporte";
-            this.iconButtonReporte.Size = new System.Drawing.Size(258, 82);
+            this.iconButtonReporte.Size = new System.Drawing.Size(194, 67);
             this.iconButtonReporte.TabIndex = 6;
             this.iconButtonReporte.TabStop = false;
             this.iconButtonReporte.Text = "Reporte";
@@ -144,9 +148,10 @@
             this.iconButtonInforme.IconColor = System.Drawing.Color.White;
             this.iconButtonInforme.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonInforme.IconSize = 32;
-            this.iconButtonInforme.Location = new System.Drawing.Point(0, 152);
+            this.iconButtonInforme.Location = new System.Drawing.Point(0, 124);
+            this.iconButtonInforme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButtonInforme.Name = "iconButtonInforme";
-            this.iconButtonInforme.Size = new System.Drawing.Size(261, 82);
+            this.iconButtonInforme.Size = new System.Drawing.Size(196, 67);
             this.iconButtonInforme.TabIndex = 3;
             this.iconButtonInforme.Text = "Informe";
             this.iconButtonInforme.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -158,23 +163,25 @@
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Beige;
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(264, 0);
+            this.panelPrincipal.Location = new System.Drawing.Point(198, 0);
+            this.panelPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(1660, 1055);
+            this.panelPrincipal.Size = new System.Drawing.Size(1245, 857);
             this.panelPrincipal.TabIndex = 2;
+            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1443, 857);
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelSlideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(899, 448);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(674, 364);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

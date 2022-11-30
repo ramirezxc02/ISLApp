@@ -109,11 +109,10 @@
     <Compile Include="FrmVerInfractor.Designer.cs">
       <DependentUpon>FrmVerInfractor.cs</DependentUpon>
     </Compile>
-    <Compile Include="islaSanLucasBDDataSet.cs">
-      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="islaSanLucasBDDataSet.Designer.cs">
-      <DependentUpon>islaSanLucasBDDataSet.cs</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>islaSanLucasBDDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -159,7 +158,7 @@
     </None>
     <None Include="islaSanLucasBDDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>islaSanLucasBDDataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>islaSanLucasBDDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="islaSanLucasBDDataSet.xss">
