@@ -47,7 +47,9 @@ namespace ISLApp
         private  void FrmInfractor_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'islaSanLucasBDDataSet.ActividadIlegal' Puede moverla o quitarla según sea necesario.
-            
+            this.actividadIlegalTableAdapter.Fill(this.islaSanLucasBDDataSet.ActividadIlegal);
+            // TODO: esta línea de código carga datos en la tabla 'islaSanLucasBDDataSet.ActividadIlegal' Puede moverla o quitarla según sea necesario.
+
         }
 
         // metodo asincronico que requiere del campo cedula(req) para realizar una busqueda a traves de la api.

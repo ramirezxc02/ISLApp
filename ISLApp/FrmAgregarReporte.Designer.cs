@@ -85,16 +85,11 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.islaSanLucasBDDataSet = new ISLApp.islaSanLucasBDDataSet();
-            this.infractorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.infractorTableAdapter = new ISLApp.islaSanLucasBDDataSetTableAdapters.InfractorTableAdapter();
             this.panelTitleBar.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.islaSanLucasBDDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infractorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -697,17 +692,15 @@
             // 
             // islaSanLucasBDDataSet
             // 
-            this.islaSanLucasBDDataSet.DataSetName = "islaSanLucasBDDataSet";
-            this.islaSanLucasBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+           
             // 
             // infractorBindingSource
             // 
-            this.infractorBindingSource.DataMember = "Infractor";
-            this.infractorBindingSource.DataSource = this.islaSanLucasBDDataSet;
+   
             // 
             // infractorTableAdapter
             // 
-            this.infractorTableAdapter.ClearBeforeFill = true;
+          
             // 
             // FrmAgregarReporte
             // 
@@ -745,8 +738,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.islaSanLucasBDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.infractorBindingSource)).EndInit();
+       
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -799,9 +791,6 @@
         private System.Windows.Forms.CheckBox checkBoxOeste;
         private System.Windows.Forms.CheckBox checkBoxSur;
         private System.Windows.Forms.CheckBox checkBoxEste;
-        private islaSanLucasBDDataSet islaSanLucasBDDataSet;
-        private System.Windows.Forms.BindingSource infractorBindingSource;
-        private islaSanLucasBDDataSetTableAdapters.InfractorTableAdapter infractorTableAdapter;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox2;
