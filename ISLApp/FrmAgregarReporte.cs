@@ -343,6 +343,7 @@ namespace ISLApp
 
         private void iconButtonRegresar_Click(object sender, EventArgs e)
         {
+           
             this.Close();
         }
 

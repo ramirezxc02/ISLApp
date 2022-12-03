@@ -28,6 +28,7 @@ namespace ISLApp
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
 ;
             reporte = new Reporte();
+           
         }
 
         //establece la conexion con la base de datos
@@ -58,6 +59,7 @@ namespace ISLApp
             FrmAgregarReporte frmAgregarReporte = new FrmAgregarReporte();
             frmAgregarReporte.ShowDialog();
             frmAgregarReporte.Close();
+            this.mostrarReporte();
         }
 
         
@@ -97,23 +99,12 @@ namespace ISLApp
 
         private void FrmReporte_Load(object sender, EventArgs e)
         {
-            this.AjustarDataGridAltura();
             this.mostrarReporte();
-          
-        }
-
-        private void AjustarDataGridAltura()
-        {
-            var altura = dataGridDatos.ColumnHeadersHeight;
-            foreach(DataGridViewRow dr in dataGridDatos.Rows)
-            {
-                altura += dr.Height;
-            }
-            dataGridDatos.Height = altura;
         }
 
         private void FrmReporte_Activated(object sender, EventArgs e)
         {
+           
         }
 
 
@@ -129,7 +120,7 @@ namespace ISLApp
                     try
                     {
                         FrmAgregarReporte frmAgregarReporte = new FrmAgregarReporte();
-                        frmAgregarReporte.buttonAcciones.Text = "Modificar";
+                        frmAgregarReporte.buttonAcciones.Text = "MODIFICAR";
                
                         frmAgregarReporte.valor = 1;
 
@@ -175,6 +166,8 @@ namespace ISLApp
             {
                 MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+            this.mostrarReporte();
         }
 
         //si el usuario elige un reporte en el tabla el valor pasa a ser 1
@@ -223,6 +216,22 @@ namespace ISLApp
                 MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+
+            this.mostrarReporte();
+
+        }
+
+        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+
+
+
+
+
+
+
 
         }
     }
