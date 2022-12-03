@@ -211,10 +211,10 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxBuscarReporte;
-        private System.Windows.Forms.DataGridView dataGridDatos;
         private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
+        public System.Windows.Forms.DataGridView dataGridDatos;
     }
 }
