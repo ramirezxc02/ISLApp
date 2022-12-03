@@ -36,9 +36,6 @@ namespace ISLApp
             conexion.registrarReporte(reporte);
            
         }
-
-      
-        
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             try
@@ -97,21 +94,8 @@ namespace ISLApp
 
         private void FrmReporte_Load(object sender, EventArgs e)
         {
-            this.AjustarDataGridAltura();
             this.mostrarReporte();
-          
         }
-
-        private void AjustarDataGridAltura()
-        {
-            var altura = dataGridDatos.ColumnHeadersHeight;
-            foreach(DataGridViewRow dr in dataGridDatos.Rows)
-            {
-                altura += dr.Height;
-            }
-            dataGridDatos.Height = altura;
-        }
-
         private void FrmReporte_Activated(object sender, EventArgs e)
         {
         }
@@ -223,6 +207,11 @@ namespace ISLApp
                 MessageBox.Show("Debe seleccionar una casilla con datos", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+
+        }
+
+        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

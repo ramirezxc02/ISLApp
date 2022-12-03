@@ -39,12 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
             this.labelTitle = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxNumeroOficio = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,6 +178,20 @@
             this.panelTitleBar.Size = new System.Drawing.Size(1159, 80);
             this.panelTitleBar.TabIndex = 20;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(1053, 12);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(74, 65);
+            this.iconButton1.TabIndex = 38;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // iconButtonRegresar
             // 
             this.iconButtonRegresar.FlatAppearance.BorderSize = 0;
@@ -229,20 +243,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1159, 516);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(1053, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(74, 65);
-            this.iconButton1.TabIndex = 38;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // FrmRegistrarUsuario
             // 

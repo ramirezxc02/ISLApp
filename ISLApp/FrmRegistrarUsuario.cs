@@ -48,12 +48,13 @@ namespace ISLApp
                 }
                 else
                 {
-                    if (this.BtnAgregar.Text == "Agregar")
+                    if (this.BtnAgregar.Text == "GUARDAR")
                     {
                         this.conexion.registrarUsuario(llenarUsuario());
                         MessageBox.Show("Usuario registrado exitosamente", "Information",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limpiarCampos();
+
 
                     }
                     else

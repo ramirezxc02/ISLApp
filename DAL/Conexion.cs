@@ -262,6 +262,50 @@ namespace DAL
             }
         }
 
+        public DataSet mostrarUsuarios()
+        {
+            try
+            {
+                //se instancia una conexion
+                this.connection = new SqlConnection(this.strConexion);
+                //se intenta abrir
+                this.connection.Open();
+                //se instancia el comando
+                this.command = new SqlCommand();
+                //se asigna la conexion al comando
+                this.command.Connection = this.connection;
+                //se indica el tipo de comando
+                this.command.CommandType = CommandType.StoredProcedure;
+                //se indica el nombre del procedimiento almacenado 
+                this.command.CommandText = "[Sp_MostrarUsuarios]";
+                //asignamos el valor al parametro del procedimiento
+                // this.command.Parameters.AddWithValue("@numeroOficio", numOficio);
+                //se instancia un adaptador
+                this.adapter = new SqlDataAdapter();
+                //se instancia el comando al adaptador
+                this.adapter.SelectCommand = this.command;
+                //se instancia un dataset con los datos del comando
+                this.dataset = new DataSet();
+                //se llena el data set con los datos del comando
+                this.adapter.Fill(this.dataset);
+                //se cierran los recursos
+                this.connection.Close();
+                //se liberan los recursosr
+                this.connection.Dispose();
+                this.command.Dispose();
+                this.adapter.Dispose();
+
+                //se retorna el DataSet
+                return this.dataset;
+            }
+
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
         public void registrarUsuario(Usuario usuario)
         {
             try
@@ -556,7 +600,6 @@ namespace DAL
                 throw ex;
             }
         }
-
         public DataSet buscarReporte(string criterio)
         {
             try

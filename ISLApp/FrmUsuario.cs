@@ -169,6 +169,23 @@ namespace ISLApp
             }
         }
 
+        public void mostrarUsuarios()
+        {
+            try
+            {
+                this.DgUsuarios.DataSource = this.conexion.mostrarUsuarios().Tables[0];
+                this.DgUsuarios.AutoResizeColumns();
+                this.DgUsuarios.ReadOnly = true;
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
@@ -185,8 +202,7 @@ namespace ISLApp
 
                     string nombreUsuario = DgUsuarios.CurrentRow.Cells[0].Value.ToString();
                     FrmRegistrarUsuario frm = new FrmRegistrarUsuario(nombreUsuario);
-                    frm.BtnAgregar.Text = "Modificar Usuario";
-                    frm.BtnAgregar.Text = "Editar";
+                    frm.BtnAgregar.Text = "MODIFICAR";
                     frm.TxtNombreUsuario.Text = DgUsuarios.CurrentRow.Cells[0].Value.ToString();
                     frm.TxtCorreo.Text = DgUsuarios.CurrentRow.Cells[1].Value.ToString();
                     frm.CbRol.Text = DgUsuarios.CurrentRow.Cells[2].Value.ToString();
@@ -212,12 +228,18 @@ namespace ISLApp
             try
             {
                 EliminarUsuario();
+                this.mostrarUsuarios();
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
+        }
+
+        private void FrmUsuario_Load(object sender, EventArgs e)
+        {
+            this.mostrarUsuarios();
         }
     }//fin de la clase
 }//fin del namespace
