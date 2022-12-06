@@ -73,6 +73,7 @@
             // CbRol
             // 
             this.CbRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbRol.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbRol.FormattingEnabled = true;
             this.CbRol.Items.AddRange(new object[] {
             "Administrador",
@@ -80,7 +81,7 @@
             this.CbRol.Location = new System.Drawing.Point(626, 397);
             this.CbRol.Margin = new System.Windows.Forms.Padding(4);
             this.CbRol.Name = "CbRol";
-            this.CbRol.Size = new System.Drawing.Size(384, 24);
+            this.CbRol.Size = new System.Drawing.Size(384, 33);
             this.CbRol.TabIndex = 14;
             // 
             // BtnAgregar

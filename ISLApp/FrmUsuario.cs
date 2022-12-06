@@ -189,8 +189,9 @@ namespace ISLApp
         private void button1_Click(object sender, EventArgs e)
         {
             FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
-
-            frmRegistrarUsuario.Show();
+            frmRegistrarUsuario.ShowDialog();
+            frmRegistrarUsuario.Close();
+            this.mostrarUsuarios();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -208,6 +209,7 @@ namespace ISLApp
                     frm.CbRol.Text = DgUsuarios.CurrentRow.Cells[2].Value.ToString();
                     frm.TxtContrasenia.Text = DgUsuarios.CurrentRow.Cells[3].Value.ToString();
                     frm.Show();
+                   
                 }
                 else
                 {
@@ -215,12 +217,16 @@ namespace ISLApp
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
+                this.mostrarUsuarios();
+
             }
             catch (Exception ex)
             {
 
                 throw ex;
             }
+
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
