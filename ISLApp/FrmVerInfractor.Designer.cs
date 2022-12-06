@@ -33,8 +33,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgDatos = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDatos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -43,9 +43,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(171, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 26);
+            this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre:";
             // 
@@ -75,6 +76,7 @@
             // 
             this.dtgDatos.AllowUserToAddRows = false;
             this.dtgDatos.BackgroundColor = System.Drawing.Color.Beige;
+            this.dtgDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgDatos.Location = new System.Drawing.Point(28, 229);
             this.dtgDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -97,18 +99,6 @@
             this.panel1.Size = new System.Drawing.Size(1067, 102);
             this.panel1.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(316, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(412, 55);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Búsqueda de Infractores";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // iconButtonRegresar
             // 
             this.iconButtonRegresar.FlatAppearance.BorderSize = 0;
@@ -123,6 +113,18 @@
             this.iconButtonRegresar.UseVisualStyleBackColor = true;
             this.iconButtonRegresar.Click += new System.EventHandler(this.iconButtonRegresar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 25);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Búsqueda de Infractores";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // FrmVerInfractor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -133,7 +135,7 @@
             this.Controls.Add(this.dtgDatos);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmVerInfractor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmVerInfractor";

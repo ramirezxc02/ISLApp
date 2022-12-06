@@ -28,22 +28,22 @@ namespace ISLApp
                 // Cambia el estado de los botones en caso de que los infractores sean igual que cero, el sistema no habilita los botones, en caso contrario se habilitaran para realizar una modificacion o eliminar.
                 if (state() == 0)
                 {
-                    this.btnEditar.Enabled = false;
-                    this.btnEliminar.Enabled = false;
+                    this.buttonModificar.Enabled = false;
+                    this.buttonModificar.Enabled = false;
                 }
                 else
                 {
-                    this.btnEditar.Enabled = true;
-                    this.btnEliminar.Enabled = true;
+                    this.buttonModificar.Enabled = true;
+                    this.buttonModificar.Enabled = true;
                 }
             }
             else {
                     // En el caso de que no haya conexion a la base de datos se deshabilita los botones
                 MessageBox.Show("No se logro establecer la conexión con la base de datos", "Error"
                     , MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.btnAgregar.Enabled = false;
-                this.btnEditar.Enabled = false;
-                this.btnEliminar.Enabled = false;
+                this.buttonAgregar.Enabled = false;
+                this.buttonAgregar.Enabled = false;
+                this.buttonAgregar.Enabled = false;
 
                 //Se desactiva la barra de busqueda en caso de no tener conexion
                 this.txtBusqueda.Enabled = false;
@@ -264,8 +264,8 @@ namespace ISLApp
         //Metodo que activa los botones de editar y modificar si la cantidad de infractores registrados activos son mayores a 0
         public void activarBotones()
         {
-            this.btnEliminar.Enabled = true;
-            this.btnEditar.Enabled = true;
+            this.buttonEliminar.Enabled = true;
+            this.buttonEliminar.Enabled = true;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

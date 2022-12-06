@@ -33,7 +33,7 @@ namespace ISLApp
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
-            this.lblTitle.Text = "Modificar Informe";
+            //this.lblTitle.Text = "Modificar Informe"; ERRRROOORR
             this.btnCrear.Text = "Modificar";
             tbCedula.Text = cedula;
             tbNombreInfractor.Text = nombre;
@@ -190,6 +190,13 @@ namespace ISLApp
         private void cbActividades_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

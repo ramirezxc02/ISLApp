@@ -220,23 +220,6 @@ namespace ISLApp
 
         }
 
-        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
-
-
-
-
-
-
-
-
-        }
-
-        private void dataGridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }
