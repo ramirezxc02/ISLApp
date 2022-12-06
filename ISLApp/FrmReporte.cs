@@ -98,10 +98,9 @@ namespace ISLApp
         {
             this.mostrarReporte();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 177ba2b8a9576c1f7298b33a0261965df26cbbb3
+       
+
         private void FrmReporte_Activated(object sender, EventArgs e)
         {
            

@@ -69,8 +69,11 @@ namespace ISLApp
                             }
                             frm.Show();
                             this.Hide();
-                            MessageBox.Show("Bienvenido " + usernameSaved + "", "Information",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            var w = new Form() { Size = new Size(0, 0) };
+                            Task.Delay(TimeSpan.FromSeconds(1))
+                                .ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+                            MessageBox.Show(w, "Bienvenido " + usernameSaved + "", "Information");
+                          
                         }
                         else
                         {
