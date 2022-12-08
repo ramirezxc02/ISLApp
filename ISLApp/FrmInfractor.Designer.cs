@@ -98,7 +98,7 @@ namespace ISLApp
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft JhengHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrear.Location = new System.Drawing.Point(443, 444);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(384, 46);
             this.btnCrear.TabIndex = 4;
@@ -115,15 +115,16 @@ namespace ISLApp
             "Turista",
             "Capitan"});
             this.cbTipo.Location = new System.Drawing.Point(443, 250);
-            this.cbTipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(384, 33);
             this.cbTipo.TabIndex = 5;
             // 
             // tbCedula
             // 
+            this.tbCedula.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCedula.Location = new System.Drawing.Point(443, 68);
-            this.tbCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCedula.Margin = new System.Windows.Forms.Padding(4);
             this.tbCedula.MaxLength = 9;
             this.tbCedula.Multiline = true;
             this.tbCedula.Name = "tbCedula";
@@ -134,8 +135,9 @@ namespace ISLApp
             // tbNombreInfractor
             // 
             this.tbNombreInfractor.Enabled = false;
+            this.tbNombreInfractor.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNombreInfractor.Location = new System.Drawing.Point(443, 156);
-            this.tbNombreInfractor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNombreInfractor.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombreInfractor.Multiline = true;
             this.tbNombreInfractor.Name = "tbNombreInfractor";
             this.tbNombreInfractor.Size = new System.Drawing.Size(384, 40);
@@ -149,7 +151,7 @@ namespace ISLApp
             this.btnBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusqueda.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBusqueda.Location = new System.Drawing.Point(894, 67);
-            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.Size = new System.Drawing.Size(147, 41);
             this.btnBusqueda.TabIndex = 8;
@@ -301,7 +303,7 @@ namespace ISLApp
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmInfractor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
