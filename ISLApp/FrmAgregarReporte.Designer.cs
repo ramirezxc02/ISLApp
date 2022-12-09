@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
             this.labelTitle = new System.Windows.Forms.Label();
@@ -158,7 +157,7 @@
             this.textBoxIDreporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIDreporte.Multiline = true;
             this.textBoxIDreporte.Name = "textBoxIDreporte";
-            this.textBoxIDreporte.Size = new System.Drawing.Size(244, 29);
+            this.textBoxIDreporte.Size = new System.Drawing.Size(167, 38);
             this.textBoxIDreporte.TabIndex = 38;
             // 
             // labelIDReporte
@@ -340,6 +339,7 @@
             // 
             // dateTimeHoraInicio
             // 
+            this.dateTimeHoraInicio.CalendarFont = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeHoraInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.dateTimeHoraInicio.CustomFormat = " HH:mm:ss";
             this.dateTimeHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -352,6 +352,7 @@
             // 
             // dateTimeHoraFinal
             // 
+            this.dateTimeHoraFinal.CalendarFont = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeHoraFinal.CustomFormat = "hh:mm:ss";
             this.dateTimeHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimeHoraFinal.Location = new System.Drawing.Point(484, 262);
@@ -379,7 +380,7 @@
             this.textBoxIDInfractor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIDInfractor.Multiline = true;
             this.textBoxIDInfractor.Name = "textBoxIDInfractor";
-            this.textBoxIDInfractor.Size = new System.Drawing.Size(244, 29);
+            this.textBoxIDInfractor.Size = new System.Drawing.Size(167, 38);
             this.textBoxIDInfractor.TabIndex = 49;
             // 
             // textBoxCentroOperativo
@@ -406,7 +407,7 @@
             this.textBoxActividad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxActividad.Multiline = true;
             this.textBoxActividad.Name = "textBoxActividad";
-            this.textBoxActividad.Size = new System.Drawing.Size(244, 29);
+            this.textBoxActividad.Size = new System.Drawing.Size(312, 38);
             this.textBoxActividad.TabIndex = 52;
             // 
             // textBoxMatricula
@@ -420,7 +421,7 @@
             // 
             // textBoxCombustible
             // 
-            this.textBoxCombustible.Location = new System.Drawing.Point(33, 383);
+            this.textBoxCombustible.Location = new System.Drawing.Point(26, 383);
             this.textBoxCombustible.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCombustible.Multiline = true;
             this.textBoxCombustible.Name = "textBoxCombustible";
@@ -433,12 +434,12 @@
             this.textBoxKmInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKmInicial.Multiline = true;
             this.textBoxKmInicial.Name = "textBoxKmInicial";
-            this.textBoxKmInicial.Size = new System.Drawing.Size(150, 29);
+            this.textBoxKmInicial.Size = new System.Drawing.Size(167, 38);
             this.textBoxKmInicial.TabIndex = 57;
             // 
             // textBoxViatico
             // 
-            this.textBoxViatico.Location = new System.Drawing.Point(430, 373);
+            this.textBoxViatico.Location = new System.Drawing.Point(430, 383);
             this.textBoxViatico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxViatico.Multiline = true;
             this.textBoxViatico.Name = "textBoxViatico";
@@ -451,7 +452,7 @@
             this.textBoxKmFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKmFinal.Multiline = true;
             this.textBoxKmFinal.Name = "textBoxKmFinal";
-            this.textBoxKmFinal.Size = new System.Drawing.Size(150, 29);
+            this.textBoxKmFinal.Size = new System.Drawing.Size(167, 38);
             this.textBoxKmFinal.TabIndex = 59;
             // 
             // textBoxRecomendacion
@@ -518,27 +519,28 @@
             this.textBoxNumFuncionariosOtrasInstituciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumFuncionariosOtrasInstituciones.Multiline = true;
             this.textBoxNumFuncionariosOtrasInstituciones.Name = "textBoxNumFuncionariosOtrasInstituciones";
-            this.textBoxNumFuncionariosOtrasInstituciones.Size = new System.Drawing.Size(150, 29);
+            this.textBoxNumFuncionariosOtrasInstituciones.Size = new System.Drawing.Size(167, 38);
             this.textBoxNumFuncionariosOtrasInstituciones.TabIndex = 66;
             this.textBoxNumFuncionariosOtrasInstituciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumFuncionariosOtrasInstituciones_KeyPress);
             // 
             // textBoxNumFuncionariosSINAC
             // 
-            this.textBoxNumFuncionariosSINAC.Location = new System.Drawing.Point(430, 159);
+            this.textBoxNumFuncionariosSINAC.Location = new System.Drawing.Point(430, 144);
             this.textBoxNumFuncionariosSINAC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumFuncionariosSINAC.Multiline = true;
             this.textBoxNumFuncionariosSINAC.Name = "textBoxNumFuncionariosSINAC";
-            this.textBoxNumFuncionariosSINAC.Size = new System.Drawing.Size(150, 29);
+            this.textBoxNumFuncionariosSINAC.Size = new System.Drawing.Size(167, 38);
             this.textBoxNumFuncionariosSINAC.TabIndex = 67;
             this.textBoxNumFuncionariosSINAC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNumFuncionariosSINAC_KeyPress);
             // 
             // checkBoxNorte
             // 
             this.checkBoxNorte.AutoSize = true;
+            this.checkBoxNorte.Font = new System.Drawing.Font("Microsoft JhengHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxNorte.Location = new System.Drawing.Point(72, 768);
             this.checkBoxNorte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxNorte.Name = "checkBoxNorte";
-            this.checkBoxNorte.Size = new System.Drawing.Size(302, 20);
+            this.checkBoxNorte.Size = new System.Drawing.Size(293, 21);
             this.checkBoxNorte.TabIndex = 68;
             this.checkBoxNorte.Text = "Norte de Playa Cocos hasta Playa Bella Vista";
             this.checkBoxNorte.UseVisualStyleBackColor = true;
@@ -558,10 +560,11 @@
             // checkBoxSur
             // 
             this.checkBoxSur.AutoSize = true;
+            this.checkBoxSur.Font = new System.Drawing.Font("Microsoft JhengHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxSur.Location = new System.Drawing.Point(72, 814);
             this.checkBoxSur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBoxSur.Name = "checkBoxSur";
-            this.checkBoxSur.Size = new System.Drawing.Size(299, 20);
+            this.checkBoxSur.Size = new System.Drawing.Size(294, 21);
             this.checkBoxSur.TabIndex = 70;
             this.checkBoxSur.Text = "Sur de Playa Tumbabotes hasta Playa Limón";
             this.checkBoxSur.UseVisualStyleBackColor = true;
@@ -623,7 +626,7 @@
             this.iconButtonBuscarIDInfractor.IconColor = System.Drawing.Color.Black;
             this.iconButtonBuscarIDInfractor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonBuscarIDInfractor.IconSize = 40;
-            this.iconButtonBuscarIDInfractor.Location = new System.Drawing.Point(1281, 40);
+            this.iconButtonBuscarIDInfractor.Location = new System.Drawing.Point(1196, 51);
             this.iconButtonBuscarIDInfractor.Name = "iconButtonBuscarIDInfractor";
             this.iconButtonBuscarIDInfractor.Size = new System.Drawing.Size(87, 53);
             this.iconButtonBuscarIDInfractor.TabIndex = 73;
@@ -686,21 +689,9 @@
             this.groupBox5.Controls.Add(this.buttonAcciones);
             this.groupBox5.Location = new System.Drawing.Point(36, 909);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1867, 116);
+            this.groupBox5.Size = new System.Drawing.Size(1893, 116);
             this.groupBox5.TabIndex = 79;
             this.groupBox5.TabStop = false;
-            // 
-            // islaSanLucasBDDataSet
-            // 
-           
-            // 
-            // infractorBindingSource
-            // 
-   
-            // 
-            // infractorTableAdapter
-            // 
-          
             // 
             // FrmAgregarReporte
             // 
@@ -738,7 +729,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-       
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -36,7 +36,6 @@ namespace ISLApp
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             FrmRegistrarUsuario frmRegistrarUsuario = new FrmRegistrarUsuario();
-
             frmRegistrarUsuario.Show();
         }
 
@@ -208,7 +207,9 @@ namespace ISLApp
                     frm.TxtCorreo.Text = DgUsuarios.CurrentRow.Cells[1].Value.ToString();
                     frm.CbRol.Text = DgUsuarios.CurrentRow.Cells[2].Value.ToString();
                     frm.TxtContrasenia.Text = DgUsuarios.CurrentRow.Cells[3].Value.ToString();
-                    frm.Show();
+                    frm.ShowDialog();
+                    frm.Close();
+                    this.mostrarUsuarios();
                    
                 }
                 else
