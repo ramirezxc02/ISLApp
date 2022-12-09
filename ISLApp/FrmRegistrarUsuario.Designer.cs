@@ -41,7 +41,7 @@
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelAgregarUsuario = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxNumeroOficio = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -169,7 +169,7 @@
             this.panelTitleBar.BackColor = System.Drawing.Color.OliveDrab;
             this.panelTitleBar.Controls.Add(this.iconButton1);
             this.panelTitleBar.Controls.Add(this.iconButtonRegresar);
-            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Controls.Add(this.labelAgregarUsuario);
             this.panelTitleBar.Controls.Add(this.label17);
             this.panelTitleBar.Controls.Add(this.textBoxNumeroOficio);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -206,16 +206,16 @@
             this.iconButtonRegresar.TabIndex = 37;
             this.iconButtonRegresar.UseVisualStyleBackColor = true;
             // 
-            // labelTitle
+            // labelAgregarUsuario
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(44, 29);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(232, 29);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "AGREGAR USUARIO";
+            this.labelAgregarUsuario.AutoSize = true;
+            this.labelAgregarUsuario.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAgregarUsuario.ForeColor = System.Drawing.Color.White;
+            this.labelAgregarUsuario.Location = new System.Drawing.Point(44, 29);
+            this.labelAgregarUsuario.Name = "labelAgregarUsuario";
+            this.labelAgregarUsuario.Size = new System.Drawing.Size(232, 29);
+            this.labelAgregarUsuario.TabIndex = 0;
+            this.labelAgregarUsuario.Text = "AGREGAR USUARIO";
             // 
             // label17
             // 
@@ -287,10 +287,10 @@
         public System.Windows.Forms.TextBox TxtCorreo;
         private System.Windows.Forms.Panel panelTitleBar;
         private FontAwesome.Sharp.IconButton iconButtonRegresar;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label17;
         public System.Windows.Forms.TextBox textBoxNumeroOficio;
         private System.Windows.Forms.GroupBox groupBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
+        public System.Windows.Forms.Label labelAgregarUsuario;
     }
 }

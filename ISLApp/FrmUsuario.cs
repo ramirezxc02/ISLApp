@@ -204,6 +204,7 @@ namespace ISLApp
                     string nombreUsuario = DgUsuarios.CurrentRow.Cells[0].Value.ToString();
                     FrmRegistrarUsuario frm = new FrmRegistrarUsuario(nombreUsuario);
                     frm.BtnAgregar.Text = "MODIFICAR";
+                    frm.labelAgregarUsuario.Text = "MODIFICAR USUARIO";
                     frm.TxtNombreUsuario.Text = DgUsuarios.CurrentRow.Cells[0].Value.ToString();
                     frm.TxtCorreo.Text = DgUsuarios.CurrentRow.Cells[1].Value.ToString();
                     frm.CbRol.Text = DgUsuarios.CurrentRow.Cells[2].Value.ToString();

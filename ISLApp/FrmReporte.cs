@@ -120,7 +120,9 @@ namespace ISLApp
                     {
                         FrmAgregarReporte frmAgregarReporte = new FrmAgregarReporte();
                         frmAgregarReporte.buttonAcciones.Text = "MODIFICAR";
-               
+                        frmAgregarReporte.labelAgregarReporte.Text = "MODIFICAR REPORTE";
+
+
                         frmAgregarReporte.valor = 1;
 
 

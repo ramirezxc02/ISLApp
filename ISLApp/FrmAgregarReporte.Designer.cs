@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.iconButtonRegresar = new FontAwesome.Sharp.IconButton();
-            this.labelTitle = new System.Windows.Forms.Label();
+            this.labelAgregarReporte = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.textBoxNumeroOficio = new System.Windows.Forms.TextBox();
             this.textBoxIDreporte = new System.Windows.Forms.TextBox();
@@ -96,7 +95,7 @@
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.OliveDrab;
             this.panelTitleBar.Controls.Add(this.iconButtonRegresar);
-            this.panelTitleBar.Controls.Add(this.labelTitle);
+            this.panelTitleBar.Controls.Add(this.labelAgregarReporte);
             this.panelTitleBar.Controls.Add(this.label17);
             this.panelTitleBar.Controls.Add(this.textBoxNumeroOficio);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -120,16 +119,16 @@
             this.iconButtonRegresar.UseVisualStyleBackColor = true;
             this.iconButtonRegresar.Click += new System.EventHandler(this.iconButtonRegresar_Click);
             // 
-            // labelTitle
+            // labelAgregarReporte
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(44, 29);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(230, 29);
-            this.labelTitle.TabIndex = 0;
-            this.labelTitle.Text = "AGREGAR REPORTE";
+            this.labelAgregarReporte.AutoSize = true;
+            this.labelAgregarReporte.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAgregarReporte.ForeColor = System.Drawing.Color.White;
+            this.labelAgregarReporte.Location = new System.Drawing.Point(44, 29);
+            this.labelAgregarReporte.Name = "labelAgregarReporte";
+            this.labelAgregarReporte.Size = new System.Drawing.Size(230, 29);
+            this.labelAgregarReporte.TabIndex = 0;
+            this.labelAgregarReporte.Text = "AGREGAR REPORTE";
             // 
             // label17
             // 
@@ -690,18 +689,6 @@
             this.groupBox5.TabIndex = 79;
             this.groupBox5.TabStop = false;
             // 
-            // islaSanLucasBDDataSet
-            // 
-           
-            // 
-            // infractorBindingSource
-            // 
-   
-            // 
-            // infractorTableAdapter
-            // 
-          
-            // 
             // FrmAgregarReporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -738,7 +725,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-       
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,7 +732,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -801,5 +786,6 @@
         private FontAwesome.Sharp.IconButton iconButtonBuscarIDInfractor;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.Label labelAgregarReporte;
     }
 }
