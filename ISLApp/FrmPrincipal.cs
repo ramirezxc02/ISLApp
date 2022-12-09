@@ -56,6 +56,7 @@ namespace ISLApp
             }
             FrmReporte frmReporte = new FrmReporte();
             frmReporte.ShowDialog();
+
             frmReporte.Close();
         }
 
