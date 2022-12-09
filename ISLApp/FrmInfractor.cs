@@ -3,6 +3,7 @@ using DAL;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
@@ -33,8 +34,11 @@ namespace ISLApp
         {
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
-            //this.lblTitle.Text = "Modificar Informe"; ERRRROOORR
-            this.btnCrear.Text = "Modificar";
+            if (modificar) { 
+                labelTitle.Text = "Modificar Informe"; 
+                this.btnCrear.Text = "Modificar";
+                this.btnCrear.BackColor = Color.Goldenrod;
+            }
             tbCedula.Text = cedula;
             tbNombreInfractor.Text = nombre;
             cbTipo.Text = tipo;
