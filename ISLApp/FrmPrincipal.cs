@@ -67,7 +67,7 @@ namespace ISLApp
 
         private void btnCrearInforme_Click(object sender, EventArgs e)
         {
-
+            panelPrincipal.BackgroundImage = null;
             if (frmInforme == null)
             {
                 frmInforme = new FrmInformeInfractor();
@@ -81,6 +81,7 @@ namespace ISLApp
 
         private void BtnUsuario_Click(object sender, EventArgs e)
         {
+            panelPrincipal.BackgroundImage = null;
             if (frmInforme != null){
                 frmInforme.Dispose();
                 frmInforme=null;
@@ -103,12 +104,14 @@ namespace ISLApp
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
+            panelPrincipal.BackgroundImage = null;
             this.abrirFormularioHijo(new FrmInformeInfractor());
 
         }
 
         private void iconButtonReporte_Click(object sender, EventArgs e)
         {
+            panelPrincipal.BackgroundImage = null;
             this.abrirFormularioHijo(new FrmReporte());
 
         }
@@ -126,6 +129,7 @@ namespace ISLApp
 
         private void iconButtonUsuario_Click(object sender, EventArgs e)
         {
+            panelPrincipal.BackgroundImage = null;
             this.abrirFormularioHijo(new FrmUsuario());
         }
 

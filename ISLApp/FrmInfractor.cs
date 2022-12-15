@@ -35,9 +35,9 @@ namespace ISLApp
             InitializeComponent();
             this.conexion = new Conexion(FrmPrincipal.getStringConexion());
             if (modificar) { 
-                labelTitle.Text = "Modificar Informe"; 
-                this.btnCrear.Text = "Modificar";
-                this.btnCrear.BackColor = Color.Goldenrod;
+                labelTitle.Text = "MODIFICAR INFORME"; 
+                this.btnCrear.Text = "MODIFICAR";
+               
             }
             tbCedula.Text = cedula;
             tbNombreInfractor.Text = nombre;
