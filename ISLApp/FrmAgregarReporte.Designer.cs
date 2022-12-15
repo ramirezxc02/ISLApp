@@ -777,10 +777,6 @@
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox textBoxNumFuncionariosOtrasInstituciones;
         public System.Windows.Forms.TextBox textBoxNumFuncionariosSINAC;
-        private System.Windows.Forms.CheckBox checkBoxNorte;
-        private System.Windows.Forms.CheckBox checkBoxOeste;
-        private System.Windows.Forms.CheckBox checkBoxSur;
-        private System.Windows.Forms.CheckBox checkBoxEste;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -791,5 +787,9 @@
         private FontAwesome.Sharp.IconButton iconButtonBuscarIDInfractor;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.CheckBox checkBoxNorte;
+        public System.Windows.Forms.CheckBox checkBoxOeste;
+        public System.Windows.Forms.CheckBox checkBoxSur;
+        public System.Windows.Forms.CheckBox checkBoxEste;
     }
 }

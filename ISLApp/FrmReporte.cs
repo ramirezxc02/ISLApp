@@ -120,7 +120,7 @@ namespace ISLApp
                     {
                         FrmAgregarReporte frmAgregarReporte = new FrmAgregarReporte();
                         frmAgregarReporte.buttonAcciones.Text = "MODIFICAR";
-               
+
                         frmAgregarReporte.valor = 1;
 
 
@@ -146,6 +146,29 @@ namespace ISLApp
                         frmAgregarReporte.textBoxNumFuncionariosSINAC.Text = reporte.numeroFuncionariosSINAC.ToString();
                         frmAgregarReporte.textBoxNumFuncionariosOtrasInstituciones.Text = reporte.numeroFuncionariosOtrasInstituciones.ToString();
 
+                        char delimitador = ',';
+                        string[] valores = reporte.lugaresRecorridos.Split(delimitador);
+
+                        for (int i = 0; i < valores.Length; i++)
+                        {
+                            if (valores[i].Equals("Norte de Playa Cocos hasta Playa Bella Vista"))
+                            {
+                                frmAgregarReporte.checkBoxNorte.Checked = true;
+                            }
+                            if (valores[i].Equals("Sur de Playa Tumbabotes hasta Playa Limón"))
+                            {
+                                frmAgregarReporte.checkBoxSur.Checked = true;
+                            }
+                            if (valores[i].Equals("Este desde Playa Limón hasta Playa Cocos"))
+                            {
+                                frmAgregarReporte.checkBoxEste.Checked = true;
+                            }
+                            if (valores[i].Equals("Oeste de Playa Bella Vista hasta Playa Tumbabotes"))
+                            {
+                                frmAgregarReporte.checkBoxOeste.Checked = true;
+                            }
+
+                        }
 
                         frmAgregarReporte.ShowDialog();
                         idReporteModificar = 0;
@@ -167,6 +190,22 @@ namespace ISLApp
             }
 
             this.mostrarReporte();
+        }
+        public void validarlugarRecorrido(string lugares)
+        {
+            string validarLugares = lugares;
+            char delimitador = ',';
+            string[] valores = validarLugares.Split(delimitador);
+
+            for(int i = 0; i < valores.Length; i ++)
+            {
+                if (valores[i] == "Norte de Playa Cocos hasta Playa Bella Vista")
+                {
+                    MessageBox.Show(valores[i]);
+                }
+
+            }
+
         }
 
         //si el usuario elige un reporte en el tabla el valor pasa a ser 1
