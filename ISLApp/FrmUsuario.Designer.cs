@@ -119,7 +119,7 @@
             // 
             // TxtBusqueda
             // 
-            this.TxtBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBusqueda.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBusqueda.Location = new System.Drawing.Point(327, 50);
             this.TxtBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.TxtBusqueda.Multiline = true;
@@ -168,7 +168,8 @@
             this.DgUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.DgUsuarios.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgUsuarios.Size = new System.Drawing.Size(2000, 910);
+            this.DgUsuarios.Size = new System.Drawing.Size(2350, 910);
+
             this.DgUsuarios.TabIndex = 7;
             this.DgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgUsuarios_CellClick_1);
             // 

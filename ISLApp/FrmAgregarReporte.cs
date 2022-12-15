@@ -141,7 +141,7 @@ namespace ISLApp
             {
                 if (!string.IsNullOrWhiteSpace(lugaresRecorridos))
                 {
-                    lugaresRecorridos = lugaresRecorridos + " , " + this.checkBoxNorte.Text.Trim();
+                    lugaresRecorridos = lugaresRecorridos + "," + this.checkBoxNorte.Text.Trim();
                 }
                 else
                 {
@@ -152,7 +152,7 @@ namespace ISLApp
             {
                 if (!string.IsNullOrWhiteSpace(lugaresRecorridos))
                 {
-                    lugaresRecorridos = lugaresRecorridos + " , " + this.checkBoxSur.Text.Trim();
+                    lugaresRecorridos = lugaresRecorridos + "," + this.checkBoxSur.Text.Trim();
                 }
                 else
                 {
@@ -163,7 +163,7 @@ namespace ISLApp
             {
                 if (!string.IsNullOrWhiteSpace(lugaresRecorridos))
                 {
-                    lugaresRecorridos = lugaresRecorridos + " , " + this.checkBoxEste.Text.Trim();
+                    lugaresRecorridos = lugaresRecorridos + "," + this.checkBoxEste.Text.Trim();
                 }
                 else
                 {
@@ -175,7 +175,7 @@ namespace ISLApp
             {
                 if (!string.IsNullOrWhiteSpace(lugaresRecorridos))
                 {
-                    lugaresRecorridos = lugaresRecorridos + " , " + this.checkBoxOeste.Text.Trim();
+                    lugaresRecorridos = lugaresRecorridos + "," + this.checkBoxOeste.Text.Trim();
                 }
                 else
                 {
