@@ -143,6 +143,7 @@
             // 
             // textBoxNumeroOficio
             // 
+            this.textBoxNumeroOficio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumeroOficio.Location = new System.Drawing.Point(1493, 29);
             this.textBoxNumeroOficio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumeroOficio.Multiline = true;
@@ -153,6 +154,7 @@
             // textBoxIDreporte
             // 
             this.textBoxIDreporte.Enabled = false;
+            this.textBoxIDreporte.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIDreporte.Location = new System.Drawing.Point(41, 58);
             this.textBoxIDreporte.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIDreporte.Multiline = true;
@@ -342,24 +344,26 @@
             this.dateTimeHoraInicio.CalendarFont = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeHoraInicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.dateTimeHoraInicio.CustomFormat = " HH:mm:ss";
+            this.dateTimeHoraInicio.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeHoraInicio.Location = new System.Drawing.Point(72, 506);
             this.dateTimeHoraInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeHoraInicio.Name = "dateTimeHoraInicio";
             this.dateTimeHoraInicio.ShowUpDown = true;
-            this.dateTimeHoraInicio.Size = new System.Drawing.Size(188, 22);
+            this.dateTimeHoraInicio.Size = new System.Drawing.Size(188, 31);
             this.dateTimeHoraInicio.TabIndex = 1;
             // 
             // dateTimeHoraFinal
             // 
             this.dateTimeHoraFinal.CalendarFont = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeHoraFinal.CustomFormat = "hh:mm:ss";
+            this.dateTimeHoraFinal.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimeHoraFinal.Location = new System.Drawing.Point(484, 262);
+            this.dateTimeHoraFinal.Location = new System.Drawing.Point(484, 256);
             this.dateTimeHoraFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeHoraFinal.Name = "dateTimeHoraFinal";
             this.dateTimeHoraFinal.ShowUpDown = true;
-            this.dateTimeHoraFinal.Size = new System.Drawing.Size(200, 22);
+            this.dateTimeHoraFinal.Size = new System.Drawing.Size(200, 31);
             this.dateTimeHoraFinal.TabIndex = 47;
             // 
             // dateTimeFechaReporte
@@ -376,6 +380,7 @@
             // textBoxIDInfractor
             // 
             this.textBoxIDInfractor.Enabled = false;
+            this.textBoxIDInfractor.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxIDInfractor.Location = new System.Drawing.Point(1023, 58);
             this.textBoxIDInfractor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIDInfractor.Multiline = true;
@@ -385,6 +390,7 @@
             // 
             // textBoxCentroOperativo
             // 
+            this.textBoxCentroOperativo.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCentroOperativo.Location = new System.Drawing.Point(484, 144);
             this.textBoxCentroOperativo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCentroOperativo.Multiline = true;
@@ -394,6 +400,7 @@
             // 
             // textBoxCodigoPresupuestario
             // 
+            this.textBoxCodigoPresupuestario.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCodigoPresupuestario.Location = new System.Drawing.Point(72, 394);
             this.textBoxCodigoPresupuestario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCodigoPresupuestario.Multiline = true;
@@ -403,15 +410,17 @@
             // 
             // textBoxActividad
             // 
+            this.textBoxActividad.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxActividad.Location = new System.Drawing.Point(484, 58);
             this.textBoxActividad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxActividad.Multiline = true;
             this.textBoxActividad.Name = "textBoxActividad";
-            this.textBoxActividad.Size = new System.Drawing.Size(312, 38);
+            this.textBoxActividad.Size = new System.Drawing.Size(492, 38);
             this.textBoxActividad.TabIndex = 52;
             // 
             // textBoxMatricula
             // 
+            this.textBoxMatricula.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMatricula.Location = new System.Drawing.Point(26, 264);
             this.textBoxMatricula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxMatricula.Multiline = true;
@@ -421,6 +430,7 @@
             // 
             // textBoxCombustible
             // 
+            this.textBoxCombustible.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCombustible.Location = new System.Drawing.Point(26, 383);
             this.textBoxCombustible.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCombustible.Multiline = true;
@@ -430,6 +440,7 @@
             // 
             // textBoxKmInicial
             // 
+            this.textBoxKmInicial.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKmInicial.Location = new System.Drawing.Point(67, 623);
             this.textBoxKmInicial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKmInicial.Multiline = true;
@@ -439,6 +450,7 @@
             // 
             // textBoxViatico
             // 
+            this.textBoxViatico.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxViatico.Location = new System.Drawing.Point(430, 383);
             this.textBoxViatico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxViatico.Multiline = true;
@@ -448,6 +460,7 @@
             // 
             // textBoxKmFinal
             // 
+            this.textBoxKmFinal.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKmFinal.Location = new System.Drawing.Point(484, 373);
             this.textBoxKmFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxKmFinal.Multiline = true;
@@ -457,6 +470,7 @@
             // 
             // textBoxRecomendacion
             // 
+            this.textBoxRecomendacion.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRecomendacion.Location = new System.Drawing.Point(26, 505);
             this.textBoxRecomendacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRecomendacion.Multiline = true;
@@ -466,6 +480,7 @@
             // 
             // textBoxObservacion
             // 
+            this.textBoxObservacion.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxObservacion.Location = new System.Drawing.Point(430, 505);
             this.textBoxObservacion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxObservacion.Multiline = true;
@@ -485,6 +500,7 @@
             // 
             // textBoxPlaca
             // 
+            this.textBoxPlaca.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPlaca.Location = new System.Drawing.Point(26, 144);
             this.textBoxPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPlaca.Multiline = true;
@@ -515,6 +531,7 @@
             // 
             // textBoxNumFuncionariosOtrasInstituciones
             // 
+            this.textBoxNumFuncionariosOtrasInstituciones.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumFuncionariosOtrasInstituciones.Location = new System.Drawing.Point(430, 264);
             this.textBoxNumFuncionariosOtrasInstituciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumFuncionariosOtrasInstituciones.Multiline = true;
@@ -525,6 +542,7 @@
             // 
             // textBoxNumFuncionariosSINAC
             // 
+            this.textBoxNumFuncionariosSINAC.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumFuncionariosSINAC.Location = new System.Drawing.Point(430, 144);
             this.textBoxNumFuncionariosSINAC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxNumFuncionariosSINAC.Multiline = true;

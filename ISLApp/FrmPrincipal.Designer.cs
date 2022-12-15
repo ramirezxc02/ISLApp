@@ -31,7 +31,6 @@
             this.panelSlideMenu = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButtonUsuario = new FontAwesome.Sharp.IconButton();
-            this.iconButtonConsultar = new FontAwesome.Sharp.IconButton();
             this.iconButtonReporte = new FontAwesome.Sharp.IconButton();
             this.iconButtonInforme = new FontAwesome.Sharp.IconButton();
             this.panelPrincipal = new System.Windows.Forms.Panel();
@@ -43,7 +42,6 @@
             this.panelSlideMenu.BackColor = System.Drawing.Color.OliveDrab;
             this.panelSlideMenu.Controls.Add(this.iconButton1);
             this.panelSlideMenu.Controls.Add(this.iconButtonUsuario);
-            this.panelSlideMenu.Controls.Add(this.iconButtonConsultar);
             this.panelSlideMenu.Controls.Add(this.iconButtonReporte);
             this.panelSlideMenu.Controls.Add(this.iconButtonInforme);
             this.panelSlideMenu.Dock = System.Windows.Forms.DockStyle.Left;
@@ -85,7 +83,7 @@
             this.iconButtonUsuario.IconColor = System.Drawing.Color.White;
             this.iconButtonUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButtonUsuario.IconSize = 32;
-            this.iconButtonUsuario.Location = new System.Drawing.Point(3, 406);
+            this.iconButtonUsuario.Location = new System.Drawing.Point(2, 310);
             this.iconButtonUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButtonUsuario.Name = "iconButtonUsuario";
             this.iconButtonUsuario.Size = new System.Drawing.Size(259, 82);
@@ -95,26 +93,6 @@
             this.iconButtonUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButtonUsuario.UseVisualStyleBackColor = true;
             this.iconButtonUsuario.Click += new System.EventHandler(this.iconButtonUsuario_Click);
-            // 
-            // iconButtonConsultar
-            // 
-            this.iconButtonConsultar.FlatAppearance.BorderSize = 0;
-            this.iconButtonConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonConsultar.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButtonConsultar.ForeColor = System.Drawing.Color.White;
-            this.iconButtonConsultar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButtonConsultar.IconColor = System.Drawing.Color.White;
-            this.iconButtonConsultar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonConsultar.IconSize = 32;
-            this.iconButtonConsultar.Location = new System.Drawing.Point(0, 322);
-            this.iconButtonConsultar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconButtonConsultar.Name = "iconButtonConsultar";
-            this.iconButtonConsultar.Size = new System.Drawing.Size(261, 82);
-            this.iconButtonConsultar.TabIndex = 7;
-            this.iconButtonConsultar.Text = "Consultar";
-            this.iconButtonConsultar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonConsultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButtonConsultar.UseVisualStyleBackColor = true;
             // 
             // iconButtonReporte
             // 
@@ -197,7 +175,6 @@
 
         private System.Windows.Forms.Panel panelSlideMenu;
         private FontAwesome.Sharp.IconButton iconButtonInforme;
-        private FontAwesome.Sharp.IconButton iconButtonConsultar;
         private FontAwesome.Sharp.IconButton iconButtonReporte;
         public FontAwesome.Sharp.IconButton iconButtonUsuario;
         public FontAwesome.Sharp.IconButton iconButton1;

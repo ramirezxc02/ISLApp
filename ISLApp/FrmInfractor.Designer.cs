@@ -73,7 +73,7 @@ namespace ISLApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(159, 152);
+            this.label3.Location = new System.Drawing.Point(159, 193);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 25);
@@ -84,7 +84,7 @@ namespace ISLApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(267, 246);
+            this.label4.Location = new System.Drawing.Point(281, 271);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 25);
@@ -114,7 +114,7 @@ namespace ISLApp
             this.cbTipo.Items.AddRange(new object[] {
             "Turista",
             "Capitan"});
-            this.cbTipo.Location = new System.Drawing.Point(443, 250);
+            this.cbTipo.Location = new System.Drawing.Point(443, 263);
             this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(384, 33);
@@ -140,7 +140,7 @@ namespace ISLApp
             this.tbNombreInfractor.Margin = new System.Windows.Forms.Padding(4);
             this.tbNombreInfractor.Multiline = true;
             this.tbNombreInfractor.Name = "tbNombreInfractor";
-            this.tbNombreInfractor.Size = new System.Drawing.Size(384, 40);
+            this.tbNombreInfractor.Size = new System.Drawing.Size(384, 62);
             this.tbNombreInfractor.TabIndex = 7;
             // 
             // btnBusqueda
@@ -167,7 +167,7 @@ namespace ISLApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(179, 333);
+            this.label1.Location = new System.Drawing.Point(180, 345);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 25);

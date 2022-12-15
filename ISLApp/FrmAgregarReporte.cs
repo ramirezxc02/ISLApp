@@ -88,7 +88,7 @@ namespace ISLApp
             reporte = new Reporte();
             reporte.idReporte = int.Parse(this.textBoxIDreporte.Text.Trim());
             reporte.idInfractor = int.Parse(this.textBoxIDInfractor.Text.Trim());
-            reporte.funcionarioResponsable = "Fabiana";
+            reporte.funcionarioResponsable = "";
             reporte.centroOperativo = this.textBoxCentroOperativo.Text.Trim();
             reporte.codigoPresupuestario = this.textBoxCodigoPresupuestario.Text.Trim();
             reporte.viatico = int.Parse(this.textBoxViatico.Text.Trim());
