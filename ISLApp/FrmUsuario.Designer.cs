@@ -169,6 +169,7 @@
             this.DgUsuarios.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.DgUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgUsuarios.Size = new System.Drawing.Size(2350, 910);
+
             this.DgUsuarios.TabIndex = 7;
             this.DgUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgUsuarios_CellClick_1);
             // 

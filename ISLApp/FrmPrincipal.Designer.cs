@@ -162,6 +162,8 @@
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.Beige;
+            this.panelPrincipal.BackgroundImage = global::ISLApp.Properties.Resources.isla_san_lucas;
+            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(264, 0);
             this.panelPrincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

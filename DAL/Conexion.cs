@@ -171,6 +171,7 @@ namespace DAL
                 this.command.Parameters.AddWithValue("@nombreResponsable", infractor.nombreResponsable);
                 this.command.Parameters.AddWithValue("@tipoResponsable", infractor.tipoResponsable);
                 this.command.Parameters.AddWithValue("@idResponsable", idModificacion);
+                this.command.Parameters.AddWithValue("@actividadIlegal", infractor.actividadIlegal);
                 this.command.ExecuteNonQuery();
                 this.command.Parameters.Clear();
                 this.connection.Close();
