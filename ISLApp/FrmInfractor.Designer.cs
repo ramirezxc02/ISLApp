@@ -62,10 +62,9 @@ namespace ISLApp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(173, 83);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(130, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(167, 25);
+            this.label2.Size = new System.Drawing.Size(135, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Cédula Infractor:";
             // 
@@ -73,10 +72,9 @@ namespace ISLApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(159, 193);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(119, 157);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 25);
+            this.label3.Size = new System.Drawing.Size(145, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nombre Infractor:";
             // 
@@ -84,10 +82,9 @@ namespace ISLApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(281, 271);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(211, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
+            this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tipo:";
             // 
@@ -97,10 +94,9 @@ namespace ISLApp
             this.btnCrear.FlatAppearance.BorderSize = 0;
             this.btnCrear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrear.Font = new System.Drawing.Font("Microsoft JhengHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrear.Location = new System.Drawing.Point(443, 444);
-            this.btnCrear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCrear.Location = new System.Drawing.Point(332, 361);
             this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(384, 46);
+            this.btnCrear.Size = new System.Drawing.Size(288, 37);
             this.btnCrear.TabIndex = 4;
             this.btnCrear.Text = "GUARDAR ";
             this.btnCrear.UseVisualStyleBackColor = false;
@@ -114,21 +110,19 @@ namespace ISLApp
             this.cbTipo.Items.AddRange(new object[] {
             "Turista",
             "Capitan"});
-            this.cbTipo.Location = new System.Drawing.Point(443, 263);
-            this.cbTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTipo.Location = new System.Drawing.Point(332, 214);
             this.cbTipo.Name = "cbTipo";
-            this.cbTipo.Size = new System.Drawing.Size(384, 33);
+            this.cbTipo.Size = new System.Drawing.Size(289, 28);
             this.cbTipo.TabIndex = 5;
             // 
             // tbCedula
             // 
             this.tbCedula.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCedula.Location = new System.Drawing.Point(443, 68);
-            this.tbCedula.Margin = new System.Windows.Forms.Padding(4);
+            this.tbCedula.Location = new System.Drawing.Point(332, 55);
             this.tbCedula.MaxLength = 9;
             this.tbCedula.Multiline = true;
             this.tbCedula.Name = "tbCedula";
-            this.tbCedula.Size = new System.Drawing.Size(384, 40);
+            this.tbCedula.Size = new System.Drawing.Size(289, 33);
             this.tbCedula.TabIndex = 6;
             this.tbCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCedula_KeyPress);
             // 
@@ -136,11 +130,10 @@ namespace ISLApp
             // 
             this.tbNombreInfractor.Enabled = false;
             this.tbNombreInfractor.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombreInfractor.Location = new System.Drawing.Point(443, 156);
-            this.tbNombreInfractor.Margin = new System.Windows.Forms.Padding(4);
+            this.tbNombreInfractor.Location = new System.Drawing.Point(332, 127);
             this.tbNombreInfractor.Multiline = true;
             this.tbNombreInfractor.Name = "tbNombreInfractor";
-            this.tbNombreInfractor.Size = new System.Drawing.Size(384, 62);
+            this.tbNombreInfractor.Size = new System.Drawing.Size(289, 51);
             this.tbNombreInfractor.TabIndex = 7;
             // 
             // btnBusqueda
@@ -150,10 +143,9 @@ namespace ISLApp
             this.btnBusqueda.FlatAppearance.BorderSize = 0;
             this.btnBusqueda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBusqueda.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusqueda.Location = new System.Drawing.Point(894, 67);
-            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBusqueda.Location = new System.Drawing.Point(670, 54);
             this.btnBusqueda.Name = "btnBusqueda";
-            this.btnBusqueda.Size = new System.Drawing.Size(147, 41);
+            this.btnBusqueda.Size = new System.Drawing.Size(110, 33);
             this.btnBusqueda.TabIndex = 8;
             this.btnBusqueda.Text = "BUSCAR";
             this.btnBusqueda.UseVisualStyleBackColor = false;
@@ -167,10 +159,9 @@ namespace ISLApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(180, 345);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(135, 280);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 25);
+            this.label1.Size = new System.Drawing.Size(127, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Actividad ilegal:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -182,12 +173,13 @@ namespace ISLApp
             this.cbActividades.DisplayMember = "nombreActividadIlegal";
             this.cbActividades.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbActividades.FormattingEnabled = true;
-            this.cbActividades.Location = new System.Drawing.Point(443, 337);
-            this.cbActividades.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbActividades.Location = new System.Drawing.Point(332, 274);
+            this.cbActividades.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbActividades.Name = "cbActividades";
-            this.cbActividades.Size = new System.Drawing.Size(384, 33);
+            this.cbActividades.Size = new System.Drawing.Size(289, 28);
             this.cbActividades.TabIndex = 11;
             this.cbActividades.ValueMember = "idActividadIlegal";
+            this.cbActividades.SelectedIndexChanged += new System.EventHandler(this.cbActividades_SelectedIndexChanged);
             // 
             // actividadIlegalBindingSource1
             // 
@@ -215,9 +207,11 @@ namespace ISLApp
             this.groupBox1.Controls.Add(this.tbNombreInfractor);
             this.groupBox1.Controls.Add(this.cbTipo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(0, 85);
+            this.groupBox1.Location = new System.Drawing.Point(0, 69);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1159, 516);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(869, 419);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             // 
@@ -231,9 +225,9 @@ namespace ISLApp
             this.panelTitleBar.Controls.Add(this.textBoxNumeroOficio);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1159, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(869, 65);
             this.panelTitleBar.TabIndex = 23;
             // 
             // iconButton1
@@ -243,9 +237,10 @@ namespace ISLApp
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(1053, 12);
+            this.iconButton1.Location = new System.Drawing.Point(790, 10);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(74, 65);
+            this.iconButton1.Size = new System.Drawing.Size(56, 53);
             this.iconButton1.TabIndex = 38;
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
@@ -257,9 +252,10 @@ namespace ISLApp
             this.iconButtonRegresar.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
             this.iconButtonRegresar.IconColor = System.Drawing.Color.White;
             this.iconButtonRegresar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonRegresar.Location = new System.Drawing.Point(1713, 16);
+            this.iconButtonRegresar.Location = new System.Drawing.Point(1285, 13);
+            this.iconButtonRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.iconButtonRegresar.Name = "iconButtonRegresar";
-            this.iconButtonRegresar.Size = new System.Drawing.Size(74, 65);
+            this.iconButtonRegresar.Size = new System.Drawing.Size(56, 53);
             this.iconButtonRegresar.TabIndex = 37;
             this.iconButtonRegresar.UseVisualStyleBackColor = true;
             // 
@@ -268,9 +264,10 @@ namespace ISLApp
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Microsoft JhengHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTitle.ForeColor = System.Drawing.Color.White;
-            this.labelTitle.Location = new System.Drawing.Point(44, 29);
+            this.labelTitle.Location = new System.Drawing.Point(33, 24);
+            this.labelTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(235, 29);
+            this.labelTitle.Size = new System.Drawing.Size(188, 24);
             this.labelTitle.TabIndex = 0;
             this.labelTitle.Text = "AGREGAR INFORME";
             // 
@@ -279,31 +276,31 @@ namespace ISLApp
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft JhengHei", 10.8F);
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(1247, 35);
+            this.label17.Location = new System.Drawing.Point(935, 28);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(163, 23);
+            this.label17.Size = new System.Drawing.Size(134, 19);
             this.label17.TabIndex = 21;
             this.label17.Text = "Número de oficio:";
             // 
             // textBoxNumeroOficio
             // 
-            this.textBoxNumeroOficio.Location = new System.Drawing.Point(1493, 29);
-            this.textBoxNumeroOficio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxNumeroOficio.Location = new System.Drawing.Point(1120, 24);
+            this.textBoxNumeroOficio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNumeroOficio.Multiline = true;
             this.textBoxNumeroOficio.Name = "textBoxNumeroOficio";
-            this.textBoxNumeroOficio.Size = new System.Drawing.Size(150, 29);
+            this.textBoxNumeroOficio.Size = new System.Drawing.Size(114, 24);
             this.textBoxNumeroOficio.TabIndex = 36;
             // 
             // FrmInfractor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(1159, 613);
+            this.ClientSize = new System.Drawing.Size(869, 498);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmInfractor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

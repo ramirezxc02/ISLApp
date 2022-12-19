@@ -22,6 +22,7 @@ namespace ISLApp
         Boolean modificar = false;
         FrmInformeInfractor padre;
         int idModificacion = 0;
+        int actividadIlegal = -1;
         public FrmInfractor(FrmInformeInfractor padre)
         {
             InitializeComponent();
@@ -42,10 +43,9 @@ namespace ISLApp
             tbCedula.Text = cedula;
             tbNombreInfractor.Text = nombre;
             cbTipo.Text = tipo;
-            cbActividades.SelectedItem = actividadIlegal;
-            this.modificar = modificar;
             this.padre = padre;
             idModificacion = idInfractor;
+            this.actividadIlegal = actividadIlegal;
         }
 
         private  void FrmInfractor_Load(object sender, EventArgs e)
@@ -54,6 +54,10 @@ namespace ISLApp
             this.actividadIlegalTableAdapter.Fill(this.islaSanLucasBDDataSet.ActividadIlegal);
             // TODO: esta línea de código carga datos en la tabla 'islaSanLucasBDDataSet.ActividadIlegal' Puede moverla o quitarla según sea necesario.
 
+            if (actividadIlegal != -1) { 
+                cbActividades.SelectedIndex = actividadIlegal-1;
+                modificar = true;
+            }
         }
 
         // metodo asincronico que requiere del campo cedula(req) para realizar una busqueda a traves de la api.
@@ -191,16 +195,15 @@ namespace ISLApp
 
       
 
-        private void cbActividades_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-
 
         private void iconButton1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbActividades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
